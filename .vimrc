@@ -1,3 +1,4 @@
+set colorcolumn=79  " pep8 column
 
 set encoding=utf-8  " Always use unicode (Windows)
 

@@ -17,6 +17,10 @@ set shiftwidth=4  " Space in identation
 
 set softtabstop=4  " Same identation when run back
 
+" 2 space indenting in html, css and javascript
+autocmd FileType html,css,javascript
+     \ setlocal shiftwidth=2 softtabstop=2
+
 set expandtab  " Space no tabs
 
 set autoindent  " Autoident always on

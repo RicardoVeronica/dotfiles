@@ -54,9 +54,11 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-surround'
+Plugin 'Townk/vim-autoclose'
 
 " Python
-Plugin 'dhalter/jedi-vim'
+Plugin 'davidhalter/jedi-vim'
 Plugin 'klen/python-mode'
 Plugin 'mitsuhiko/vim-jinja'
 Plugin 'mitsuhiko/vim-python-combined'

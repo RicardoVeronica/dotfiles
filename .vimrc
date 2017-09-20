@@ -63,7 +63,7 @@ Plugin 'sickill/vim-monokai'
 
 " Basic programming plugins
 Plugin 'tpope/vim-surround'              " Change brackets, parent, etc
-Plugin 'Townk/vim-autoclose'             " Close all parent, brackets, etc
+Plugin 'jiangmiao/auto-pairs' 
 Plugin 'majutsushi/tagbar'               " Navbar with functions, vars, etc
 
 " Git

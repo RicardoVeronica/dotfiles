@@ -63,11 +63,13 @@ Plugin 'sickill/vim-monokai'
 
 " Basic programming plugins
 Plugin 'tpope/vim-surround'              " Change brackets, parent, etc
-Plugin 'jiangmiao/auto-pairs' 
+Plugin 'jiangmiao/auto-pairs'            " Auto clse brackets, parent, etc
 Plugin 'majutsushi/tagbar'               " Navbar with functions, vars, etc
+Plugin 'ervandew/supertab'               " Complete name functions and vars
 
 " Git
 Plugin 'airblade/vim-gitgutter'          " Git helps in files
+Plugin 'tpope/vim-fugitive'              " Git comands in vim
 
 " Python
 Plugin 'davidhalter/jedi-vim'            " 
@@ -86,6 +88,12 @@ filetype plugin indent on    " required
 "                    Maps
 " ===============================================
 let mapleader=","
+
+" Sorry but don't have arrow keys
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 
 " NERDTree
 nmap <Leader>nt :NERDTreeToggle<cr>

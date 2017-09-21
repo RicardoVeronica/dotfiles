@@ -63,7 +63,7 @@ Plugin 'sickill/vim-monokai'
 
 " Basic programming plugins
 Plugin 'tpope/vim-surround'              " Change brackets, parent, etc
-Plugin 'jiangmiao/auto-pairs'            " Auto clse brackets, parent, etc
+Plugin 'jiangmiao/auto-pairs'            " Auto clase brackets, parent, etc
 Plugin 'majutsushi/tagbar'               " Navbar with functions, vars, etc
 Plugin 'ervandew/supertab'               " Complete name functions and vars
 
@@ -72,10 +72,10 @@ Plugin 'airblade/vim-gitgutter'          " Git helps in files
 Plugin 'tpope/vim-fugitive'              " Git comands in vim
 
 " Python
-Plugin 'davidhalter/jedi-vim'            " 
-Plugin 'klen/python-mode'                " 
+Plugin 'davidhalter/jedi-vim'            " Autocomplete 
+Plugin 'klen/python-mode'                " Tool box
 Plugin 'mitsuhiko/vim-jinja'             " Jinja in vim 
-Plugin 'mitsuhiko/vim-python-combined'   " 
+Plugin 'mitsuhiko/vim-python-combined'   " Syntax highlighting
 Plugin 'hynek/vim-python-pep8-indent'    " Indent like pep8
 Plugin 'jmcantrell/vim-virtualenv'       " Virtualenv in vim 
 

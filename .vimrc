@@ -31,7 +31,7 @@ set softtabstop=4      " Same identation when run back
 set expandtab          " Space no tabs
 set autoindent         " Autoident always on
 
-" 2 space indenting in html, css and javascript
+" 2 space indenting in html, css, javascript and json files
 autocmd FileType html,css,javascript,json
     \ setlocal shiftwidth=2 softtabstop=2
 
@@ -40,11 +40,6 @@ autocmd FileType html,css,javascript,json
 " ===============================================
 "               Vundle start
 " ===============================================
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just
-" :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -66,6 +61,7 @@ Plugin 'tpope/vim-surround'              " Change brackets, parent, etc
 Plugin 'jiangmiao/auto-pairs'            " Auto clase brackets, parent, etc
 Plugin 'majutsushi/tagbar'               " Navbar with functions, vars, etc
 Plugin 'ervandew/supertab'               " Complete name functions and vars
+Plugin 'tomtom/tcomment_vim'             " Simple comments
 
 " Git
 Plugin 'airblade/vim-gitgutter'          " Git helps in files
@@ -73,10 +69,8 @@ Plugin 'tpope/vim-fugitive'              " Git comands in vim
 
 " Python
 Plugin 'davidhalter/jedi-vim'            " Autocomplete 
-Plugin 'klen/python-mode'                " Tool box
-Plugin 'mitsuhiko/vim-jinja'             " Jinja in vim 
-Plugin 'mitsuhiko/vim-python-combined'   " Syntax highlighting
-Plugin 'hynek/vim-python-pep8-indent'    " Indent like pep8
+Plugin 'klen/python-mode'                " Python libraries
+Plugin 'lepture/vim-jinja'               " Jinja for vim
 Plugin 'jmcantrell/vim-virtualenv'       " Virtualenv in vim 
 
 call vundle#end()            " required
@@ -88,6 +82,12 @@ filetype plugin indent on    " required
 "                    Maps
 " ===============================================
 let mapleader=","
+
+" Window navigation
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
 
 " Sorry but don't have arrow keys
 noremap <Up> <Nop>
@@ -101,18 +101,15 @@ let NERDTreeWinSize=21
 
 " Buftabline
 set hidden
-nnoremap <C-N> :bprev<cr> 
-nnoremap <C-M> :bnext<cr> 
+nnoremap <C-n> :bprev<cr> 
+nnoremap <C-m> :bnext<cr> 
 
 " Tagbar
 nmap <F8> :TagbarToggle<cr>
 let tagbar_width=19
 
-" Window navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+" python-mode syntax checking python3
+let g:pymode_python = 'python3'
 
 
 

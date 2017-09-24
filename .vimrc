@@ -4,7 +4,7 @@
 "            Add basics configuration
 " ===============================================
 set nocompatible       " Disable vi compatibility mode
-set colorcolumn=79     " Like pep8
+set colorcolumn=80     " Column limit
 syntax on              " Color in syntax
 set number             " Show a line number
 set relativenumber     " Relative numbers in line numbers
@@ -61,7 +61,7 @@ Plugin 'tpope/vim-surround'              " Change brackets, parent, etc
 Plugin 'jiangmiao/auto-pairs'            " Auto clase brackets, parent, etc
 Plugin 'majutsushi/tagbar'               " Navbar with functions, vars, etc
 Plugin 'ervandew/supertab'               " Complete name functions and vars
-Plugin 'tomtom/tcomment_vim'             " Simple comments
+Plugin 'tpope/vim-commentary'            " Simple commentary
 
 " Git
 Plugin 'airblade/vim-gitgutter'          " Git helps in files
@@ -97,7 +97,7 @@ noremap <Right> <Nop>
 
 " NERDTree
 nmap <Leader>nt :NERDTreeToggle<cr>
-let NERDTreeWinSize=21
+let NERDTreeWinSize=20
 
 " Buftabline
 set hidden
@@ -106,7 +106,7 @@ nnoremap <C-m> :bnext<cr>
 
 " Tagbar
 nmap <F8> :TagbarToggle<cr>
-let tagbar_width=19
+let tagbar_width=20
 
 " python-mode syntax checking python3
 let g:pymode_python = 'python3'

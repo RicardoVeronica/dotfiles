@@ -58,7 +58,7 @@ Plugin 'sickill/vim-monokai'
 
 " Basic programming plugins
 Plugin 'tpope/vim-surround'              " Change brackets, parent, etc
-Plugin 'jiangmiao/auto-pairs'            " Auto clase brackets, parent, etc
+Plugin 'jiangmiao/auto-pairs'            " Auto close brackets, parent, etc
 Plugin 'majutsushi/tagbar'               " Navbar with functions, vars, etc
 Plugin 'ervandew/supertab'               " Complete name functions and vars
 Plugin 'tpope/vim-commentary'            " Simple commentary
@@ -67,11 +67,16 @@ Plugin 'tpope/vim-commentary'            " Simple commentary
 Plugin 'airblade/vim-gitgutter'          " Git helps in files
 Plugin 'tpope/vim-fugitive'              " Git comands in vim
 
+" web languages
+Plugin 'mattn/emmet-vim'                 " Emmet for vim
+
 " Python
 Plugin 'davidhalter/jedi-vim'            " Autocomplete 
 Plugin 'klen/python-mode'                " Python libraries
-Plugin 'lepture/vim-jinja'               " Jinja for vim
 Plugin 'jmcantrell/vim-virtualenv'       " Virtualenv in vim 
+
+" django
+Plugin 'lepture/vim-jinja'               " Jinja for vim
 
 call vundle#end()            " required
 filetype plugin indent on    " required

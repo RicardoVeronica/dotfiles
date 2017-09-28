@@ -123,7 +123,8 @@ let tagbar_width=20
 " ctrlp map
 let g:ctrlp_map = '<Leader>p'
 
-" python-mode syntax checking python3
+" pymode
+let g:pymode_python = 'python3'
 let g:pymode_python = 'python3'
 let g:pymode_rope = 0
 

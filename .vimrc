@@ -72,7 +72,6 @@ Plugin 'mattn/emmet-vim'                 " Emmet for vim
 
 " Python
 Plugin 'davidhalter/jedi-vim'            " Autocomplete 
-Plugin 'klen/python-mode'                " Python libraries
 Plugin 'jmcantrell/vim-virtualenv'       " Virtualenv in vim 
 
 " django
@@ -91,17 +90,21 @@ let mapleader=","
 " Change Esc key 
 inoremap ññ <Esc>
 
+" Sorry but don't have arrow keys in normal mode
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
+
 " Window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" Sorry but don't have arrow keys in normal mode
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
+
+"----- Maps plugins
+
 
 " NERDTree
 nmap <Leader>nt :NERDTreeToggle<cr>

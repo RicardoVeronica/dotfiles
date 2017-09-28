@@ -88,13 +88,16 @@ filetype plugin indent on    " required
 " ===============================================
 let mapleader=","
 
+" Change Esc key 
+inoremap ññ <Esc>
+
 " Window navigation
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" Sorry but don't have arrow keys
+" Sorry but don't have arrow keys in normal mode
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>
@@ -112,6 +115,9 @@ nnoremap <C-m> :bnext<cr>
 " Tagbar
 nmap <F8> :TagbarToggle<cr>
 let tagbar_width=20
+
+" ctrlp map
+let g:ctrlp_map = '<Leader>p'
 
 " python-mode syntax checking python3
 let g:pymode_python = 'python3'

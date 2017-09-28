@@ -72,6 +72,7 @@ Plugin 'mattn/emmet-vim'                 " Emmet for vim
 
 " Python
 Plugin 'davidhalter/jedi-vim'            " Autocomplete 
+Plugin 'python-mode/python-mode'         " Toolbox
 Plugin 'jmcantrell/vim-virtualenv'       " Virtualenv in vim 
 
 " django
@@ -88,7 +89,7 @@ filetype plugin indent on    " required
 let mapleader=","
 
 " Change Esc key 
-inoremap ññ <Esc>
+inoremap ii <Esc>
 
 " Sorry but don't have arrow keys in normal mode
 noremap <Up> <Nop>
@@ -124,7 +125,7 @@ let g:ctrlp_map = '<Leader>p'
 
 " python-mode syntax checking python3
 let g:pymode_python = 'python3'
-
+let g:pymode_rope = 0
 
 
 " ===============================================

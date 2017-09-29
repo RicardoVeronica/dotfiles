@@ -124,8 +124,7 @@ let tagbar_width=20
 let g:ctrlp_map = '<Leader>p'
 
 " pymode
-let g:pymode_python = 'python3'
-let g:pymode_python = 'python3'
+let g:pymode_folding = 1
 let g:pymode_rope = 0
 
 

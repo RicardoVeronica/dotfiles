@@ -9,7 +9,7 @@ alias st='cd ~/Development/Vagrant/ServerTest && vagrant up && stssh'
 alias pyssh='ssh -i ~/.ssh/py_rsa vagrant@192.168.33.2'
 alias jsssh='ssh -i ~/.ssh/js_rsa vagrant@192.168.33.3'
 alias phpssh='ssh -i ~/.ssh/ph_rsa vagrant@192.168.33.7'
-alias vpssh='ssh -i ~/.ssh/vagrantPress_rsa vagrant@192.168.33.17'
+alias wpssh='ssh -i ~/.ssh/wp_rsa vagrant@192.168.33.17'
 alias stssh='ssh -i ~/.ssh/test_rsa vagrant@192.168.33.20'
 
 # Web pages

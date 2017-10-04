@@ -32,14 +32,20 @@ set expandtab          " Space no tabs
 set autoindent         " Autoident always on
 
 " 2 space indenting in html, css, javascript and json files
-autocmd FileType html,css,javascript,json
-    \ setlocal shiftwidth=2 softtabstop=2
+autocmd FileType html,css,sass,scss,javascript setlocal sw=2 sts=2
+autocmd FileType json setlocal sw=2 sts=2
 
 
 
 " ===============================================
 "               Vundle start
 " ===============================================
+" Vundle is not installed
+if empty(glob("~/.vim/bundle"))
+    silent !git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+    autocmd vimEnter * PluginInstall
+end
+
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -76,7 +82,7 @@ Plugin 'python-mode/python-mode'         " Toolbox
 Plugin 'jmcantrell/vim-virtualenv'       " Virtualenv in vim 
 
 " django
-Plugin 'lepture/vim-jinja'               " Jinja for vim
+Plugin 'Glench/Vim-Jinja2-Syntax'        " Jinja for vim
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -120,7 +126,7 @@ nnoremap <C-m> :bnext<cr>
 nmap <F8> :TagbarToggle<cr>
 let tagbar_width=20
 
-" ctrlp map
+" ctrlp
 let g:ctrlp_map = '<Leader>p'
 
 " pymode

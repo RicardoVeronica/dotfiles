@@ -40,12 +40,13 @@ autocmd FileType json setlocal sw=2 sts=2
 " ===============================================
 "               Vundle start
 " ===============================================
-" Vundle is not installed
+" If Vundle is not installed
 if empty(glob("~/.vim/bundle"))
     silent !git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     autocmd vimEnter * PluginInstall
 end
 
+" Vundle begin
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -57,17 +58,13 @@ Plugin 'scrooloose/nerdtree'             " File manager
 Plugin 'ap/vim-buftabline'               " Transform buffers in tabs
 Plugin 'ctrlpvim/ctrlp.vim'              " Helps to find files in a proyect
 
-" Colors
-Plugin 'chriskempson/vim-tomorrow-theme'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'sickill/vim-monokai'
-
 " Basic programming plugins
 Plugin 'tpope/vim-surround'              " Change brackets, parent, etc
 Plugin 'jiangmiao/auto-pairs'            " Auto close brackets, parent, etc
 Plugin 'majutsushi/tagbar'               " Navbar with functions, vars, etc
 Plugin 'ervandew/supertab'               " Complete name functions and vars
 Plugin 'tpope/vim-commentary'            " Simple commentary
+Plugin 'vim-syntastic/syntastic'         " Syntax for many languages
 
 " Git
 Plugin 'airblade/vim-gitgutter'          " Git helps in files
@@ -81,8 +78,10 @@ Plugin 'davidhalter/jedi-vim'            " Autocomplete
 Plugin 'python-mode/python-mode'         " Toolbox
 Plugin 'jmcantrell/vim-virtualenv'       " Virtualenv in vim 
 
-" django
-Plugin 'Glench/Vim-Jinja2-Syntax'        " Jinja for vim
+" Colors
+Plugin 'chriskempson/vim-tomorrow-theme'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'sickill/vim-monokai'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -93,6 +92,10 @@ filetype plugin indent on    " required
 "                    Maps
 " ===============================================
 let mapleader=","
+
+" Some easy moves
+nmap <Leader>x :bd<cr>
+nmap <Leader>q :wq<cr>
 
 " Change Esc key 
 inoremap ii <Esc>
@@ -119,8 +122,8 @@ let NERDTreeWinSize=20
 
 " Buftabline
 set hidden
-nnoremap <C-n> :bprev<cr> 
-nnoremap <C-m> :bnext<cr> 
+nnoremap <Leader>n :bprev<cr> 
+nnoremap <Leader>m :bnext<cr> 
 
 " Tagbar
 nmap <F8> :TagbarToggle<cr>
@@ -154,3 +157,4 @@ endfunction
 
 nmap <F5> :call ToggleRelativeNumber()<cr>
 imap <F5> <Esc>: call ToggleRelativeNumber()<cr>a
+

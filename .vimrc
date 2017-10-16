@@ -1,4 +1,5 @@
 " My .vimrc configuration
+" setcain - https://github.com/setcain/dotfiles/.vimrc
 
 " ===============================================
 "            Add basics configuration
@@ -94,12 +95,14 @@ filetype plugin indent on    " required
 " ===============================================
 let mapleader=","
 
-" Some easy moves
-nmap <Leader>x :bd<cr>
-nmap <Leader>q :wq<cr>
-
 " Change Esc key 
 inoremap ii <Esc>
+
+" Some easy moves
+nmap <Leader>x :bd<cr>
+nmap <Leader>q :q<cr>
+nmap <Leader>w :w<cr>
+nmap <Leader>e :wq<cr>
 
 " Sorry but don't have arrow keys in normal mode
 noremap <Up> <Nop>
@@ -114,8 +117,10 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 
-"----- Maps plugins
 
+"================================================
+"               Maps plugins
+"================================================
 
 " NERDTree
 nmap <Leader>nt :NERDTreeToggle<cr>
@@ -133,9 +138,24 @@ let tagbar_width=20
 " ctrlp
 let g:ctrlp_map = '<Leader>p'
 
+
+
+"================================================
+"               Plugin Options 
+"================================================
+
 " pymode
 let g:pymode_folding = 1
 let g:pymode_rope = 0
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 " YCM Options
 let g:ycm_complete_in_comments = 1
@@ -144,9 +164,12 @@ let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_key_list_select_completion = ['<Space>']
 
+
+
 " ===============================================
 "                  Functions
 " ===============================================
+
 " Color default
 if &t_Co >= 256 || has("gui-running")
     color Tomorrow-Night
@@ -164,4 +187,3 @@ endfunction
 
 nmap <F5> :call ToggleRelativeNumber()<cr>
 imap <F5> <Esc>: call ToggleRelativeNumber()<cr>a
-

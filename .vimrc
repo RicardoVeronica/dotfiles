@@ -65,6 +65,7 @@ Plugin 'majutsushi/tagbar'               " Navbar with functions, vars, etc
 Plugin 'ervandew/supertab'               " Complete name functions and vars
 Plugin 'tpope/vim-commentary'            " Simple commentary
 Plugin 'vim-syntastic/syntastic'         " Syntax for many languages
+Plugin 'Valloric/YouCompleteMe'          " Code completion
 
 " Git
 Plugin 'airblade/vim-gitgutter'          " Git helps in files
@@ -136,6 +137,12 @@ let g:ctrlp_map = '<Leader>p'
 let g:pymode_folding = 1
 let g:pymode_rope = 0
 
+" YCM Options
+let g:ycm_complete_in_comments = 1
+let g:ycm_complete_in_strings = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_key_list_select_completion = ['<Space>']
 
 " ===============================================
 "                  Functions

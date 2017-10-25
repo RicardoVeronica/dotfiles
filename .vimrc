@@ -14,13 +14,13 @@ set nobackup           " If you need backup something use Git
 set nowrap             " No wrap in long lines
 set cursorline         " Highlight in line
 set cursorcolumn       " Highlight in column 
+set showmatch          " Highlight parentheses and brackets
 
 " Status bar
 set showmode           " Always show mode
 set laststatus=2       " Always show status bar
 set wildmenu           " Enable menu options whit tab
 set ruler              " Enable ruler percent
-set showmatch          " Highlight parentheses and brackets
 
 " For other OS
 set encoding=utf-8              " Always use unicode
@@ -33,7 +33,8 @@ set expandtab          " Space no tabs
 set autoindent         " Autoident always on
 
 " 2 space indenting in html, css, javascript and json files
-autocmd FileType html,css,sass,scss,javascript setlocal sw=2 sts=2
+autocmd FileType html, css, javascript setlocal sw=2 sts=2
+autocmd FileType php setlocal sw=2 sts=2
 autocmd FileType json setlocal sw=2 sts=2
 
 
@@ -144,6 +145,10 @@ let g:ctrlp_map = '<Leader>p'
 "               Plugin Options 
 "================================================
 
+" jedi
+let g:jedi#rename_command = 0
+let g:jedi#documentation_command = 0
+
 " pymode
 let g:pymode_folding = 1
 let g:pymode_rope = 0
@@ -162,7 +167,7 @@ let g:ycm_complete_in_comments = 1
 let g:ycm_complete_in_strings = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 1
 let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_key_list_select_completion = ['<Space>']
+let g:ycm_key_list_select_completion = ['<Tab>']
 
 
 

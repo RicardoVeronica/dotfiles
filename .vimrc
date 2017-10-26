@@ -82,6 +82,8 @@ Plugin 'python-mode/python-mode'         " Toolbox
 Plugin 'jmcantrell/vim-virtualenv'       " Virtualenv in vim 
 
 " Colors
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'sickill/vim-monokai'

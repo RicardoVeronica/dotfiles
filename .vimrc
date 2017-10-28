@@ -68,8 +68,10 @@ Plugin 'jiangmiao/auto-pairs'            " Auto close brackets, parent, etc
 Plugin 'majutsushi/tagbar'               " Navbar with functions, vars, etc
 Plugin 'ervandew/supertab'               " Complete name functions and vars
 Plugin 'tpope/vim-commentary'            " Simple commentary
-Plugin 'vim-syntastic/syntastic'         " Syntax for many languages
+" Plugin 'vim-syntastic/syntastic'         " Syntax for many languages
 Plugin 'Valloric/YouCompleteMe'          " Code completion
+Plugin 'SirVer/ultisnips'                " Snippets whit YouCompleteMe
+Plugin 'honza/vim-snippets'              " Snippets whit ultisnips
 
 " Git
 Plugin 'airblade/vim-gitgutter'          " Git helps in files
@@ -150,29 +152,35 @@ let g:ctrlp_map = '<Leader>p'
 "================================================
 
 " jedi
-let g:jedi#rename_command = 0
-let g:jedi#documentation_command = 0
+let g:jedi#rename_command=0
+let g:jedi#documentation_command=0
 
 " pymode
-let g:pymode_folding = 1
-let g:pymode_rope = 0
+let g:pymode_folding=1
+let g:pymode_rope=0
 
 " Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:syntastic_always_populate_loc_list=1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=0
 
 " YCM Options
-let g:ycm_complete_in_comments = 1
-let g:ycm_complete_in_strings = 1
-let g:ycm_collect_identifiers_from_comments_and_strings = 1
-let g:ycm_autoclose_preview_window_after_completion = 1
-let g:ycm_key_list_select_completion = ['<Tab>']
+let g:ycm_complete_in_comments=1
+let g:ycm_complete_in_strings=1
+let g:ycm_collect_identifiers_from_comments_and_strings=1
+let g:ycm_autoclose_preview_window_after_completion=1
+let g:ycm_key_list_select_completion=["<Space>"]
+let g:ycm_use_ultisnips_completer=1
 
+" Ultisnips
+let g:UltiSnipsListSnippets="<c-k>"
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTriggeir="<c-z>"
 
 
 " ===============================================

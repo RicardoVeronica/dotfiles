@@ -17,6 +17,7 @@ alias youtube='chromium youtube.com'
 alias gmail='chromium gmail.com'
 alias hotmail='chromium hotmail.com'
 alias router='chromium 192.168.15.1'
+alias github='chromium github.com/setcain'
 
 # Linux comands
 alias off='sudo init 0'  # Turn off machine

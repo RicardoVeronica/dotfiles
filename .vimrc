@@ -33,9 +33,11 @@ set expandtab          " Space no tabs
 set autoindent         " Autoident always on
 
 " 2 space indenting in html, css, javascript and json files
-autocmd FileType html, css, javascript setlocal sw=2 sts=2
-autocmd FileType php setlocal sw=2 sts=2
-autocmd FileType json setlocal sw=2 sts=2
+autocmd FileType html setlocal shiftwidth=2 softtabstop=2
+autocmd FileType css setlocal shiftwidth=2 softtabstop=2
+autocmd FileType js setlocal shiftwidth=2 softtabstop=2
+autocmd FileType php setlocal shiftwidth=2 softtabstop=2
+autocmd FileType json setlocal shiftwidth=2 softtabstop=2
 
 
 
@@ -77,9 +79,9 @@ Plugin 'tpope/vim-fugitive'              " Git comands in vim
 Plugin 'mattn/emmet-vim'                 " Emmet for vim
 
 " Python
-Plugin 'davidhalter/jedi-vim'            " Autocomplete 
-Plugin 'python-mode/python-mode'         " Toolbox
-Plugin 'jmcantrell/vim-virtualenv'       " Virtualenv in vim 
+" Plugin 'davidhalter/jedi-vim'            " Autocomplete 
+" Plugin 'python-mode/python-mode'         " Toolbox
+" Plugin 'jmcantrell/vim-virtualenv'       " Virtualenv in vim 
 
 " Colors
 Plugin 'vim-airline/vim-airline'

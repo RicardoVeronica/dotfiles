@@ -32,18 +32,22 @@ set softtabstop=4      " Same identation when run back
 set expandtab          " Space no tabs
 set autoindent         " Autoident always on
 
-" 2 space indenting in html, css, javascript and json files
+" 2 space indenting in web languages files
 autocmd FileType html setlocal shiftwidth=2 softtabstop=2
 autocmd FileType css setlocal shiftwidth=2 softtabstop=2
 autocmd FileType js setlocal shiftwidth=2 softtabstop=2
 autocmd FileType php setlocal shiftwidth=2 softtabstop=2
 autocmd FileType json setlocal shiftwidth=2 softtabstop=2
 
+" syntax for django
+au BufNewFile,BufRead *.html set filetype=htmldjango
+
 
 
 " ===============================================
 "               Vundle start
 " ===============================================
+
 " If Vundle is not installed
 if empty(glob("~/.vim/bundle"))
     silent !git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
@@ -70,8 +74,8 @@ Plugin 'ervandew/supertab'               " Complete name functions and vars
 Plugin 'tpope/vim-commentary'            " Simple commentary
 " Plugin 'vim-syntastic/syntastic'         " Syntax for many languages
 Plugin 'Valloric/YouCompleteMe'          " Code completion
-Plugin 'SirVer/ultisnips'                " Snippets whit YouCompleteMe
-Plugin 'honza/vim-snippets'              " Snippets whit ultisnips
+Plugin 'SirVer/ultisnips'                " YouCompleteMe dependency
+Plugin 'honza/vim-snippets'              " YouCompleteMe snippets
 
 " Git
 Plugin 'airblade/vim-gitgutter'          " Git helps in files
@@ -85,8 +89,8 @@ Plugin 'mattn/emmet-vim'                 " Emmet for vim
 " Plugin 'python-mode/python-mode'         " Toolbox
 " Plugin 'jmcantrell/vim-virtualenv'       " Virtualenv in vim 
 
-" Colors
-Plugin 'vim-airline/vim-airline'
+" Themes
+Plugin 'vim-airline/vim-airline'           " Better look in status bar
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'chriskempson/vim-tomorrow-theme'
 Plugin 'altercation/vim-colors-solarized'
@@ -108,6 +112,7 @@ inoremap ii <Esc>
 " Some easy moves
 nmap <Leader>x :bd<cr>
 nmap <Leader>q :q<cr>
+nmap <Leader>z :q!<cr>
 nmap <Leader>w :w<cr>
 nmap <Leader>e :wq<cr>
 
@@ -126,7 +131,7 @@ map <C-l> <C-w>l
 
 
 "================================================
-"               Maps plugins
+"           Maps plugins & options
 "================================================
 
 " NERDTree
@@ -145,12 +150,6 @@ let tagbar_width=20
 " ctrlp
 let g:ctrlp_map = '<Leader>p'
 
-
-
-"================================================
-"               Plugin Options 
-"================================================
-
 " jedi
 let g:jedi#rename_command=0
 let g:jedi#documentation_command=0
@@ -160,27 +159,28 @@ let g:pymode_folding=1
 let g:pymode_rope=0
 
 " Syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list=1
-let g:syntastic_auto_loc_list=1
-let g:syntastic_check_on_open=1
-let g:syntastic_check_on_wq=0
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+" let g:syntastic_always_populate_loc_list=1
+" let g:syntastic_auto_loc_list=1
+" let g:syntastic_check_on_open=1
+" let g:syntastic_check_on_wq=0
 
 " YCM Options
 let g:ycm_complete_in_comments=1
 let g:ycm_complete_in_strings=1
 let g:ycm_collect_identifiers_from_comments_and_strings=1
 let g:ycm_autoclose_preview_window_after_completion=1
-let g:ycm_key_list_select_completion=["<Space>"]
+let g:ycm_key_list_select_completion=["<tab>"]
 let g:ycm_use_ultisnips_completer=1
 
 " Ultisnips
 let g:UltiSnipsListSnippets="<c-k>"
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTriggeir="<c-z>"
+let g:UltiSnipsExpandTrigger="<Leader>a"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTriggeir="<s-tab>"
+
 
 
 " ===============================================

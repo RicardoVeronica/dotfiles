@@ -25,6 +25,7 @@ alias wifi='cd /etc/NetworkManager/system-connections'  # See wifi passwords
 alias hosts='sudo vim /etc/hosts'  # Open hosts file
 alias keys='cd ~/.ssh'  # Go to keys ssh
 alias repos='vim /etc/apt/sources.dist'  # Open repository file
+alias open='run_mailcap'  # Open files
 
 # More things
 alias fsociety="curl http://0w.nz/fsociety.ascii"  # Show fsociety logo

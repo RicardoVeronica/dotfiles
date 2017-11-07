@@ -140,8 +140,8 @@ let NERDTreeWinSize=20
 
 " Buftabline
 set hidden
-nnoremap <Leader>n :bprev<cr> 
-nnoremap <Leader>m :bnext<cr> 
+nnoremap <Leader>k :bprev<cr> 
+nnoremap <Leader>l :bnext<cr> 
 
 " Tagbar
 nmap <F8> :TagbarToggle<cr>

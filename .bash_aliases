@@ -1,11 +1,18 @@
 # Vagrant boxes
-alias py='cd ~/Development/VagrantVM/pythonanaconda && vagrant up \
-            && vagrant ssh'
-alias js='cd ~/Development/VagrantVM/javascript && vagrant up'
+alias js='cd ~/Development/vagrantVM/javascript && vagrant up ssh'
+alias py='cd ~/Development/vagrantVM/python && vagrant up'
+
+# Ansible
+alias ansi='cd /etc/ansible'
+
+# Virtualbox
+alias vbs='VBoxManage startvm'  # Turn on VB machine
+alias vbc='VBoxManage controlvm'  # Pause, reset or poweroff a VB machine
+alias vbl='VBoxManage list vms'  # List VB machines
 
 # SSH keys vagrant
+alias jsssh='ssh -i ~/.ssh/js_rsa vagrant@192.168.33.33'
 alias pyssh='ssh -i ~/.ssh/py_rsa vagrant@192.168.33.10'
-alias jsssh='ssh -i ~/.ssh/js_rsa vagrant@192.168.33.3'
 
 # Web pages
 alias youtube='chrome youtube.com'
@@ -21,7 +28,8 @@ alias hosts='sudo vim /etc/hosts'  # Open hosts file
 alias keys='cd ~/.ssh'  # Go to keys ssh
 alias repos='vim /etc/apt/sources.list'  # Open repository file
 alias open='run-mailcap'  # Open files
-alias speedtest='cd /usr/bin && speedtest.py && cd -'
+alias speedtest='cd /usr/bin && speedtest.py && cd -'  # Test internet speed
+alias linux='lsb_release -a'  # See my linux info
 
-# More things
+# More
 alias fsociety="curl http://0w.nz/fsociety.ascii"  # Show fsociety logo

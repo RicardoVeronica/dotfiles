@@ -72,7 +72,7 @@ Plugin 'jiangmiao/auto-pairs'            " Auto close brackets, parent, etc
 Plugin 'majutsushi/tagbar'               " Navbar with functions, vars, etc
 Plugin 'ervandew/supertab'               " Complete name functions and vars
 Plugin 'tpope/vim-commentary'            " Simple commentary
-" Plugin 'vim-syntastic/syntastic'         " Syntax for many languages
+Plugin 'vim-syntastic/syntastic'         " Syntax for many languages
 Plugin 'Valloric/YouCompleteMe'          " Code completion
 Plugin 'SirVer/ultisnips'                " YouCompleteMe dependency
 Plugin 'honza/vim-snippets'              " YouCompleteMe snippets
@@ -85,9 +85,10 @@ Plugin 'tpope/vim-fugitive'              " Git comands in vim
 Plugin 'mattn/emmet-vim'                 " Emmet for vim
 
 " Python
-" Plugin 'davidhalter/jedi-vim'            " Autocomplete 
-" Plugin 'python-mode/python-mode'         " Toolbox
-" Plugin 'jmcantrell/vim-virtualenv'       " Virtualenv in vim 
+Plugin 'tweekmonster/impsort.vim'        " Sort imports
+Plugin 'davidhalter/jedi-vim'            " Autocomplete 
+Plugin 'python-mode/python-mode'         " Toolbox
+Plugin 'jmcantrell/vim-virtualenv'       " Virtualenv in vim 
 
 " Themes
 Plugin 'vim-airline/vim-airline'           " Better look in status bar
@@ -137,6 +138,9 @@ map <C-l> <C-w>l
 " NERDTree
 nmap <Leader>nt :NERDTreeToggle<cr>
 let NERDTreeWinSize=20
+
+" ImpSort
+nmap <Leader>. :ImpSort<cr>
 
 " Buftabline
 set hidden

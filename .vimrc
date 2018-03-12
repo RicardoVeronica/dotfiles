@@ -62,6 +62,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 " Basic plugins
+Plugin 'terryma/vim-multiple-cursors'
 Plugin 'scrooloose/nerdtree'             " File manager
 Plugin 'ap/vim-buftabline'               " Transform buffers in tabs
 Plugin 'ctrlpvim/ctrlp.vim'              " Helps to find files in a proyect
@@ -72,7 +73,7 @@ Plugin 'jiangmiao/auto-pairs'            " Auto close brackets, parent, etc
 Plugin 'majutsushi/tagbar'               " Navbar with functions, vars, etc
 Plugin 'ervandew/supertab'               " Complete name functions and vars
 Plugin 'tpope/vim-commentary'            " Simple commentary
-Plugin 'vim-syntastic/syntastic'         " Syntax for many languages
+"Plugin 'vim-syntastic/syntastic'         " Syntax for many languages
 Plugin 'Valloric/YouCompleteMe'          " Code completion
 Plugin 'SirVer/ultisnips'                " YouCompleteMe dependency
 Plugin 'honza/vim-snippets'              " YouCompleteMe snippets
@@ -82,13 +83,13 @@ Plugin 'airblade/vim-gitgutter'          " Git helps in files
 Plugin 'tpope/vim-fugitive'              " Git comands in vim
 
 " web languages
-Plugin 'mattn/emmet-vim'                 " Emmet for vim
+Plugin 'mattn/emmet-vim'                 " Emmet for vim <C-y>
 
 " Python
 Plugin 'tweekmonster/impsort.vim'        " Sort imports
-Plugin 'davidhalter/jedi-vim'            " Autocomplete 
+"Plugin 'davidhalter/jedi-vim'            " Autocomplete 
 Plugin 'python-mode/python-mode'         " Toolbox
-Plugin 'jmcantrell/vim-virtualenv'       " Virtualenv in vim 
+"Plugin 'jmcantrell/vim-virtualenv'       " Virtualenv in vim 
 
 " Themes
 Plugin 'vim-airline/vim-airline'           " Better look in status bar
@@ -129,8 +130,6 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-
-
 "================================================
 "           Maps plugins & options
 "================================================
@@ -144,8 +143,8 @@ nmap <Leader>. :ImpSort<cr>
 
 " Buftabline
 set hidden
-nnoremap <Leader>k :bprev<cr> 
-nnoremap <Leader>l :bnext<cr> 
+nnoremap <Leader>2 :bnext<cr> 
+nnoremap <Leader>1 :bprev<cr> 
 
 " Tagbar
 nmap <F8> :TagbarToggle<cr>
@@ -155,8 +154,8 @@ let tagbar_width=20
 let g:ctrlp_map = '<Leader>p'
 
 " jedi
-let g:jedi#rename_command=0
-let g:jedi#documentation_command=0
+"let g:jedi#rename_command=0
+"let g:jedi#documentation_command=0
 
 " pymode
 let g:pymode_folding=1

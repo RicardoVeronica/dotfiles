@@ -2,6 +2,10 @@
 alias js='cd ~/Development/vagrantVM/javascript && vagrant up ssh'
 alias py='cd ~/Development/vagrantVM/python && vagrant up'
 
+# Python
+alias py2='python'
+alias py3='python3'
+
 # Ansible
 alias ansi='cd /etc/ansible'
 
@@ -11,15 +15,15 @@ alias vbc='VBoxManage controlvm'  # Pause, reset or poweroff a VB machine
 alias vbl='VBoxManage list vms'  # List VB machines
 
 # SSH keys vagrant
-alias jsssh='ssh -i ~/.ssh/js_rsa vagrant@192.168.33.33'
-alias pyssh='ssh -i ~/.ssh/py_rsa vagrant@192.168.33.10'
+# alias jsssh='ssh -i ~/.ssh/js_rsa vagrant@192.168.33.33'
+# alias pyssh='ssh -i ~/.ssh/py_rsa vagrant@192.168.33.10'
 
 # Web pages
-alias youtube='chrome youtube.com'
-alias gmail='chrome gmail.com'
-alias hotmail='chrome hotmail.com'
-alias router='chrome 192.168.15.1'
-alias github='chrome github.com/setcain'
+# alias youtube='chrome youtube.com'
+# alias gmail='chrome gmail.com'
+# alias hotmail='chrome hotmail.com'
+# alias router='chrome 192.168.15.1'
+# alias github='chrome github.com/setcain'
 
 # Linux comands
 alias off='sudo init 0'  # Turn off machine

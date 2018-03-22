@@ -1,13 +1,13 @@
 # Vagrant boxes
-alias js='cd ~/Development/vagrantVM/javascript && vagrant up ssh'
+alias js='cd ~/Development/vagrantVM/javascript && vagrant up'
 alias py='cd ~/Development/vagrantVM/python && vagrant up'
 
 # Python
 alias py2='python'
-alias py3='python3'
+alias py='python3'
 
 # Ansible
-alias ansi='cd /etc/ansible'
+alias ans='cd /etc/ansible'
 
 # Virtualbox
 alias vbs='VBoxManage startvm'  # Turn on VB machine

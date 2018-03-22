@@ -5,7 +5,7 @@
 "            Add basics configuration
 " ===============================================
 set nocompatible       " Disable vi compatibility mode
-set colorcolumn=80     " Column limit
+set colorcolumn=79     " Column limit
 syntax on              " Color in syntax
 set number             " Show a line number
 set relativenumber     " Relative numbers in line numbers

@@ -73,10 +73,11 @@ Plugin 'jiangmiao/auto-pairs'            " Auto close brackets, parent, etc
 Plugin 'majutsushi/tagbar'               " Navbar with functions, vars, etc
 Plugin 'ervandew/supertab'               " Complete name functions and vars
 Plugin 'tpope/vim-commentary'            " Simple commentary
-"Plugin 'vim-syntastic/syntastic'         " Syntax for many languages
+Plugin 'vim-syntastic/syntastic'         " Syntax for many languages
 Plugin 'Valloric/YouCompleteMe'          " Code completion
 Plugin 'SirVer/ultisnips'                " YouCompleteMe dependency
 Plugin 'honza/vim-snippets'              " YouCompleteMe snippets
+Plugin 'nathanaelkane/vim-indent-guides' " Indent guides for html
 
 " Git
 Plugin 'airblade/vim-gitgutter'          " Git helps in files

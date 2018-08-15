@@ -88,3 +88,6 @@ source $ZSH/oh-my-zsh.sh
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+# Anaconda
+export PATH="/home/setcain/anaconda3/bin:$PATH"

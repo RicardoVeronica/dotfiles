@@ -1,7 +1,5 @@
 # Django projects
-alias dj='cd ~/Development/vagrantVM/python/django_projects'
-alias docs='cd ~/Development/backup-txt'
-alias man='python manage.py'
+alias manage='python manage.py'
 alias startproject='django-admin.py startproject'
 alias startapp='python manage.py startapp'
 alias check='python manage.py check'
@@ -9,13 +7,13 @@ alias runserver='python manage.py runserver'
 alias migrations='python manage.py makemigrations && python manage.py migrate'
 
 # Python
-alias py2='python'
-alias py='python3'
+# alias py2='python'
+# alias py='python3'
 
 # Vagrant boxes
-alias vagrantjs='cd ~/Development/vagrantVM/javascript && vagrant up && vagrant ssh'
-alias vagrantpy='cd ~/Development/vagrantVM/python && vagrant up && vagrant ssh'
-alias vagrantsql='cd ~/Development/vagrantVM/sql && vagrant up && vagrant ssh'
+# alias vagrantjs='cd ~/Development/vagrantVM/javascript && vagrant up && vagrant ssh'
+# alias vagrantpy='cd ~/Development/vagrantVM/python && vagrant up && vagrant ssh'
+# alias vagrantsql='cd ~/Development/vagrantVM/sql && vagrant up && vagrant ssh'
 
 # Ansible
 alias ans='cd /etc/ansible'
@@ -26,7 +24,7 @@ alias vbc='VBoxManage controlvm'  # Pause, reset or poweroff a VB machine
 alias vbl='VBoxManage list vms'  # List VB machines
 
 # Docker
-#alias dockerh='docker -H tcp://192.168.80.80:2375'  # Connect to my vm docker
+#alias dockerh='docker -H tcp://192.168.80.80:2375'  # Connect to my docker vm
 
 # Linux comands
 alias off='sudo init 0'  # Turn off the machine

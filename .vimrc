@@ -1,3 +1,4 @@
+
 " My .vimrc configuration
 " setcain - https://github.com/setcain/dotfiles/.vimrc
 
@@ -34,7 +35,7 @@ set expandtab          " Space no tabs
 set autoindent         " Autoident always on
 
 " 2 space indenting in web languages files
-autocmd FileType html setlocal shiftwidth=2 softtabstop=2
+autocmd FileType html setlocal shiftwidth=4 softtabstop=4
 autocmd FileType css setlocal shiftwidth=2 softtabstop=2
 " autocmd FileType js setlocal shiftwidth=2 softtabstop=2
 " autocmd FileType php setlocal shiftwidth=2 softtabstop=2
@@ -75,6 +76,11 @@ Plugin 'ctrlpvim/ctrlp.vim'              " Helps to find files in a proyect
 
 """"""" Basic programming plugins
 Plugin 'tpope/vim-surround'              " Change brackets, parent, etc
+" changeString this/forThis cs"'
+" cs'<p>  - html tags
+" cst"  - to return
+" ds"  - to remove
+" ysiw[  - to add brackets or somethig like that, with no space (with space])
 
 Plugin 'jiangmiao/auto-pairs'            " Auto close brackets, parent, etc
 
@@ -86,7 +92,7 @@ Plugin 'tpope/vim-commentary'            " Simple commentary
 " gcc for comment & uncomment a line, gc in visualmode, range -
 " :1,12Commentary 
 
-Plugin 'vim-syntastic/syntastic'         " Syntax for many languages
+" Plugin 'vim-syntastic/syntastic'         " Syntax for many languages
 
 Plugin 'Valloric/YouCompleteMe'          " Code completion
 
@@ -104,13 +110,15 @@ Plugin 'tpope/vim-fugitive'              " Git comands in vim
 
 
 """"""" web languages
-Plugin 'mattn/emmet-vim'                 " Emmet for vim <C-y>
+Plugin 'mattn/emmet-vim'                 " Emmet for vim 
+" example: (just type in document.html) dev.s12.blue>ul>li*5 then <ctrl+y>,
 
 
 """"""" Python
 Plugin 'tweekmonster/impsort.vim'        " Sort imports
 
 Plugin 'python-mode/python-mode'         " Toolbox
+" shift + k = pydocs, ctr + space = autocomplete, <leader>r = run pycode
 
 " Plugin 'davidhalter/jedi-vim'
 

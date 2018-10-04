@@ -1,0 +1,13 @@
+Create symbolic links into home/user
+
+Exmple:
+ln -s .dotfiles/.vimrc .vimrc
+ln -s .dotfiles/.tmuxconf .tmuxconf
+
+
+For vim IDE:
+
+Install vim 8
+Open vim and run :PluginInstall
+Install cmake
+Go to .vim/bundle/YouCompleteMe and run install.py

@@ -36,7 +36,7 @@ set autoindent         " Autoident always on
 
 " 2 space indenting in web languages files
 autocmd FileType html setlocal shiftwidth=4 softtabstop=4
-autocmd FileType css setlocal shiftwidth=2 softtabstop=2
+autocmd FileType css setlocal shiftwidth=4 softtabstop=4
 " autocmd FileType js setlocal shiftwidth=2 softtabstop=2
 " autocmd FileType php setlocal shiftwidth=2 softtabstop=2
 " autocmd FileType json setlocal shiftwidth=2 softtabstop=2
@@ -101,12 +101,13 @@ Plugin 'SirVer/ultisnips'                " YouCompleteMe dependency
 Plugin 'honza/vim-snippets'              " YouCompleteMe snippets
 
 Plugin 'nathanaelkane/vim-indent-guides' " Indent guides for html
+" <Leader>ig
 
 
 """"""" Git
 Plugin 'airblade/vim-gitgutter'          " Git helps in files
 
-Plugin 'tpope/vim-fugitive'              " Git comands in vim
+" Plugin 'tpope/vim-fugitive'              " Git comands in vim
 
 
 """"""" web languages
@@ -120,19 +121,21 @@ Plugin 'tweekmonster/impsort.vim'        " Sort imports
 Plugin 'python-mode/python-mode'         " Toolbox
 " shift + k = pydocs, ctr + space = autocomplete, <leader>r = run pycode
 
-" Plugin 'davidhalter/jedi-vim'
+"Plugin 'davidhalter/jedi-vim'
 
 "Plugin 'jmcantrell/vim-virtualenv'
 
 
 """"""" Docker
-Plugin 'ekalinin/Dockerfile.vim'          " Syntax for Dockerfile
+"Plugin 'ekalinin/Dockerfile.vim'          " Syntax for Dockerfile
 
 
 """"""" Themes
 Plugin 'vim-airline/vim-airline'           " Better look in status bar
 
 Plugin 'vim-airline/vim-airline-themes'
+
+Plugin 'ryanoasis/vim-devicons'
 
 Plugin 'chriskempson/vim-tomorrow-theme'
 
@@ -178,7 +181,7 @@ map <C-l> <C-w>l
 
 " NERDTree
 nmap <Leader>nt :NERDTreeToggle<cr>
-let NERDTreeWinSize=20
+let NERDTreeWinSize=25
 
 " ImpSort
 nmap <Leader>. :ImpSort<cr>
@@ -190,7 +193,7 @@ nnoremap <Leader>1 :bprev<cr>
 
 " Tagbar
 nmap <F8> :TagbarToggle<cr>
-let tagbar_width=20
+let tagbar_width=25
 
 " ctrlp
 let g:ctrlp_map = '<Leader>p'
@@ -200,6 +203,7 @@ let g:ctrlp_map = '<Leader>p'
 "let g:jedi#documentation_command=0
 
 " pymode
+let g:pymode_breakepoint=0
 let g:pymode_folding=1
 let g:pymode_rope=0
 

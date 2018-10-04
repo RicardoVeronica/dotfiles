@@ -32,7 +32,8 @@ alias wifi='cd /etc/NetworkManager/system-connections'  # See wifi passwords
 alias hosts='sudo vim /etc/hosts'  # Open hosts file
 alias keys='cd ~/.ssh'  # Go to keys ssh
 alias repos='vim /etc/apt/sources.list'  # Open repository file
-alias open='run-mailcap'  # Open files
+# alias open='run-mailcap'  # Open files debian
+alias open='xdg-open'  # Open files in manjaro
 alias mylinux='lsb_release -a'  # See my linux-repo info
 
 # More

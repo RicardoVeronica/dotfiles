@@ -90,5 +90,17 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# Anaconda
-export PATH="/home/setcain/anaconda3/bin:$PATH"
+# Powerlevel9
+source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+
+# Powerlevel9 config
+WERLEVEL9K_HOME_ICON='\uF109'
+
+
+
+
+
+
+
+
+

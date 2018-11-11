@@ -9,5 +9,5 @@ For vim IDE:
 
 Install vim 8
 Open vim and run :PluginInstall
-Install cmake
+Install cmake, build-essential, python3-dev
 Go to .vim/bundle/YouCompleteMe and run install.py

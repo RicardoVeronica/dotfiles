@@ -118,7 +118,7 @@ Plugin 'mattn/emmet-vim'                 " Emmet for vim
 """"""" Python
 Plugin 'tweekmonster/impsort.vim'        " Sort imports
 
-Plugin 'python-mode/python-mode'         " Toolbox
+"Plugin 'python-mode/python-mode'         " Toolbox
 " shift + k = pydocs, ctr + space = autocomplete, <leader>r = run pycode
 
 "Plugin 'davidhalter/jedi-vim'

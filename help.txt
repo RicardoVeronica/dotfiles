@@ -2,7 +2,7 @@ Create symbolic links into home/user
 
 Exmple:
 ln -s .dotfiles/.vimrc .vimrc
-ln -s .dotfiles/.tmuxconf .tmuxconf
+ln -s .dotfiles/.tmux.conf .tmux.conf
 
 
 For vim IDE:

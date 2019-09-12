@@ -1,19 +1,18 @@
-
 " My .vimrc configuration
 " setcain - https://github.com/setcain/dotfiles/.vimrc
 
 " ===============================================
 "            Add basics configuration
 " ===============================================
-set nocompatible       " Disable vi compatibility mode
-set mouse=a            " Allow mose selection
-set colorcolumn=79     " Column limit
+" set mouse=a            " Allow mose selection
+" set nowrap             " No wrap in long lines
 syntax on              " Color in syntax
+set nocompatible       " Disable vi compatibility mode
+set colorcolumn=79     " Column limit
 set number             " Show a line number
 set relativenumber     " Relative numbers in line numbers
 set noswapfile         " No swap files
 set nobackup           " If you need backup something use Git
-set nowrap             " No wrap in long lines
 set cursorline         " Highlight in line
 set cursorcolumn       " Highlight in column 
 set showmatch          " Highlight parentheses and brackets
@@ -29,21 +28,16 @@ set encoding=utf-8              " Always use unicode
 set backspace=indent,eol,start  " Backspace always work on insert mode
 
 " Spaces and indentation
-set shiftwidth=4       " Space in identation
-set softtabstop=4      " Same identation when run back
+set shiftwidth=2       " Space in identation
+set softtabstop=2      " Same identation when run back
 set expandtab          " Space no tabs
 set autoindent         " Autoident always on
 
-" 2 space indenting in web languages files
-autocmd FileType html setlocal shiftwidth=4 softtabstop=4
-autocmd FileType css setlocal shiftwidth=4 softtabstop=4
-" autocmd FileType js setlocal shiftwidth=2 softtabstop=2
-" autocmd FileType php setlocal shiftwidth=2 softtabstop=2
-" autocmd FileType json setlocal shiftwidth=2 softtabstop=2
+" Spaces indenting in web languages files
+" autocmd FileType py setlocal shiftwidth=4 softtabstop=4
 
-" syntax for django
+" syntax for django templates
 au BufNewFile,BufRead *.html set filetype=htmldjango
-
 
 
 " ===============================================
@@ -64,95 +58,112 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 
-""""""" Basic plugins
-" Plugin 'terryma/vim-multiple-cursors'
+""""""" Basic Vim plugins
+
+" No use yet
+" Plugin 'terryma/vim-multiple-cursors'    " Multicursors for vim
+" Plugin 'w0rp/ale'                        " Lint for many languages
+" Plugin 'vim-syntastic/syntastic'         " Syntax checker for many languages
+" Plugin 'tpope/vim-fugitive'              " Git comands in vim
+" Plugin 'davidhalter/jedi-vim'            " Help for python
+" Plugin 'jmcantrell/vim-virtualenv'       " Virtual envs in vim
+" Plugin 'ekalinin/Dockerfile.vim'         " Syntax for Dockerfile
+" Plugin 'nathanaelkane/vim-indent-guides' " Indent guides for html
+" <Leader>ig 
 
 Plugin 'scrooloose/nerdtree'             " File manager
 
-Plugin 'ap/vim-buftabline'               " Transform buffers in tabs
-
 Plugin 'ctrlpvim/ctrlp.vim'              " Helps to find files in a proyect
 
+Plugin 'vim-airline/vim-airline'         " Better look in status bar
 
-""""""" Basic programming plugins
+Plugin 'vim-airline/vim-airline-themes'  " Airline themes
+
+Plugin 'ap/vim-buftabline'               " Transform buffers in tabs
+
+
+""""""" Basic write plugins
+
 Plugin 'tpope/vim-surround'              " Change brackets, parent, etc
 " changeString this/forThis cs"'
 " cs'<p>  - html tags
 " cst"  - to return
 " ds"  - to remove
-" ysiw[  - to add brackets or somethig like that, with no space (with space])
+" ysiw[  - to add brackets (with space]) (whit no space[)
+
+Plugin 'tpope/vim-commentary'            " Simple commentary
+" gcc for comment & uncomment a line
+" gc in visualmode
+" :1,12Commentary - for range
 
 Plugin 'jiangmiao/auto-pairs'            " Auto close brackets, parent, etc
 
-Plugin 'majutsushi/tagbar'               " Navbar with functions, vars, etc
+Plugin 'majutsushi/tagbar'               " Sidebar with functions, vars, etc
 
 Plugin 'ervandew/supertab'               " Complete name functions and vars
 
-Plugin 'tpope/vim-commentary'            " Simple commentary
-" gcc for comment & uncomment a line, gc in visualmode, range -
-" :1,12Commentary 
-
-" Plugin 'vim-syntastic/syntastic'         " Syntax for many languages
-
 Plugin 'Valloric/YouCompleteMe'          " Code completion
 
-Plugin 'SirVer/ultisnips'                " YouCompleteMe dependency
+Plugin 'SirVer/ultisnips'                " snippets
 
-Plugin 'honza/vim-snippets'              " YouCompleteMe snippets
-
-Plugin 'nathanaelkane/vim-indent-guides' " Indent guides for html
-" <Leader>ig
+Plugin 'honza/vim-snippets'              " ultisnips depend
 
 
 """"""" Git
+
 Plugin 'airblade/vim-gitgutter'          " Git helps in files
 
-" Plugin 'tpope/vim-fugitive'              " Git comands in vim
 
+""""""" HTML
 
-""""""" web languages
 Plugin 'mattn/emmet-vim'                 " Emmet for vim 
-" example: (just type in document.html) dev.s12.blue>ul>li*5 then <ctrl+y>,
+" example: (just type in document.html)
+" dev.s12.blue>ul>li*5
+" then <ctrl+y>,
+
+Plugin 'vim-scripts/loremipsum'          " Lorem generator
 
 
-""""""" Python
-Plugin 'tweekmonster/impsort.vim'        " Sort imports
+""""""" CSS
+
+Plugin 'gko/vim-coloresque'              " Color preview
+
+
+"""""" JavaScript
+
+Plugin 'pangloss/vim-javascript'         " JavaScript sintax and identation
+
+Plugin 'mxw/vim-jsx'                     " JSX sintax and identation
+
+
+"""""" Python
 
 Plugin 'python-mode/python-mode'         " Toolbox
-" shift + k = pydocs, ctr + space = autocomplete, <leader>r = run pycode
+" shift + k = pydocs
+" ctr + space = autocomplete
+" <leader>r = run pycode
 
-"Plugin 'davidhalter/jedi-vim'
-
-"Plugin 'jmcantrell/vim-virtualenv'
-
-
-""""""" Docker
-"Plugin 'ekalinin/Dockerfile.vim'          " Syntax for Dockerfile
+Plugin 'tweekmonster/impsort.vim'        " Sort imports
 
 
 """"""" Themes
-Plugin 'vim-airline/vim-airline'           " Better look in status bar
-
-Plugin 'vim-airline/vim-airline-themes'
 
 Plugin 'chriskempson/vim-tomorrow-theme'
 
-Plugin 'altercation/vim-colors-solarized'
-
-Plugin 'sickill/vim-monokai'
-
-Plugin 'ryanoasis/vim-devicons'
-" git clone https://github.com/ryanoasis/nerd-fonts.git
+Plugin 'ryanoasis/vim-devicons'          " Icons in vim
+" git clone
+" https://github.com/ryanoasis/nerd-fonts.git
 " ./install.sh
 
-call vundle#end()            " required
-filetype plugin indent on    " required
+call vundle#end()          " required
+filetype plugin indent on  " required
 
 
-
-"================================================
+" ===============================================
 "                    Maps
 " ===============================================
+
+" Leader key
 let mapleader=","
 
 " Change Esc key 
@@ -177,9 +188,13 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+
 "================================================
 "           Maps plugins & options
 "================================================
+
+" Save root file :w!!
+cmap w!! w !sudo dd of=%<Enter>
 
 " NERDTree
 nmap <Leader>nt :NERDTreeToggle<cr>
@@ -195,29 +210,16 @@ nnoremap <Leader>1 :bprev<cr>
 
 " Tagbar
 nmap <F8> :TagbarToggle<cr>
-let tagbar_width=25
+let tagbar_width=28
 
 " ctrlp
 let g:ctrlp_map = '<Leader>p'
 
-" jedi
-"let g:jedi#rename_command=0
-"let g:jedi#documentation_command=0
-
 " pymode
 let g:pymode_breakepoint=0
-let g:pymode_folding=1
+let g:pymode_folding=0
 let g:pymode_rope=0
-
-" Syntastic
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-" let g:syntastic_always_populate_loc_list=1
-" let g:syntastic_auto_loc_list=1
-" let g:syntastic_check_on_open=1
-" let g:syntastic_check_on_wq=0
-" let g:syntastic_filetype_map = {"Dockerfile": "dockerfile"}
+let g:pymode_lint=1
 
 " YCM Options
 let g:ycm_complete_in_comments=1
@@ -232,10 +234,6 @@ let g:UltiSnipsListSnippets="<c-k>"
 let g:UltiSnipsExpandTrigger="<Leader>a"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTriggeir="<s-tab>"
-
-" Save root file :w!!
-cmap w!! w !sudo dd of=%<Enter>
-
 
 
 " ===============================================

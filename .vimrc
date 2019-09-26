@@ -4,7 +4,7 @@
 " ===============================================
 "            Add basics configuration
 " ===============================================
-" set mouse=a            " Allow mose selection
+" set mouse=a            " Allow mouse selection
 " set nowrap             " No wrap in long lines
 syntax on              " Color in syntax
 set nocompatible       " Disable vi compatibility mode
@@ -58,9 +58,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 
-""""""" Basic Vim plugins
+"""""  No use yet Plugins
 
-" No use yet
 " Plugin 'terryma/vim-multiple-cursors'    " Multicursors for vim
 " Plugin 'w0rp/ale'                        " Lint for many languages
 " Plugin 'vim-syntastic/syntastic'         " Syntax checker for many languages
@@ -70,6 +69,9 @@ Plugin 'VundleVim/Vundle.vim'
 " Plugin 'ekalinin/Dockerfile.vim'         " Syntax for Dockerfile
 " Plugin 'nathanaelkane/vim-indent-guides' " Indent guides for html
 " <Leader>ig 
+
+
+"""""" Basics Vim functionality plugins
 
 Plugin 'scrooloose/nerdtree'             " File manager
 
@@ -129,14 +131,13 @@ Plugin 'vim-scripts/loremipsum'          " Lorem generator
 Plugin 'gko/vim-coloresque'              " Color preview
 
 
-"""""" JavaScript
+""""""" JS
 
-Plugin 'pangloss/vim-javascript'         " JavaScript sintax and identation
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
 
-Plugin 'mxw/vim-jsx'                     " JSX sintax and identation
 
-
-"""""" Python
+""""" Python
 
 Plugin 'python-mode/python-mode'         " Toolbox
 " shift + k = pydocs
@@ -148,7 +149,7 @@ Plugin 'tweekmonster/impsort.vim'        " Sort imports
 
 """"""" Themes
 
-Plugin 'chriskempson/vim-tomorrow-theme'
+Plugin 'chriskempson/vim-tomorrow-theme' " Nice theme for vim
 
 Plugin 'ryanoasis/vim-devicons'          " Icons in vim
 " git clone
@@ -176,7 +177,7 @@ nmap <Leader>z :q!<cr>
 nmap <Leader>w :w<cr>
 nmap <Leader>e :wq<cr>
 
-" Sorry but don't have arrow keys in normal mode
+" Don't have arrow keys in normal mode
 noremap <Up> <Nop>
 noremap <Down> <Nop>
 noremap <Left> <Nop>

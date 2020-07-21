@@ -17,6 +17,11 @@ set cursorline         " Highlight in line
 set cursorcolumn       " Highlight in column 
 set showmatch          " Highlight parentheses and brackets
 
+" To avoid slow scroll probles
+set ttyfast
+set ttyscroll=3
+set lazyredraw
+
 " Status bar
 set showmode           " Always show mode
 set laststatus=2       " Always show status bar
@@ -34,7 +39,10 @@ set expandtab          " Space no tabs
 set autoindent         " Autoident always on
 
 " Spaces indenting in web languages files
-" autocmd FileType py setlocal shiftwidth=4 softtabstop=4
+autocmd FileType py setlocal shiftwidth=4 softtabstop=4
+" autocmd FileType html setlocal shiftwidth=2 softtabstop=2
+" autocmd FileType js setlocal shiftwidth=2 softtabstop=2
+" autocmd FileType css setlocal shiftwidth=2 softtabstop=2
 
 " syntax for django templates
 au BufNewFile,BufRead *.html set filetype=htmldjango
@@ -58,20 +66,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 
-"""""  No use yet Plugins
 
-" Plugin 'terryma/vim-multiple-cursors'    " Multicursors for vim
-" Plugin 'w0rp/ale'                        " Lint for many languages
-" Plugin 'vim-syntastic/syntastic'         " Syntax checker for many languages
-" Plugin 'tpope/vim-fugitive'              " Git comands in vim
-" Plugin 'davidhalter/jedi-vim'            " Help for python
-" Plugin 'jmcantrell/vim-virtualenv'       " Virtual envs in vim
-" Plugin 'ekalinin/Dockerfile.vim'         " Syntax for Dockerfile
-" Plugin 'nathanaelkane/vim-indent-guides' " Indent guides for html
-" <Leader>ig 
-
-
-"""""" Basics Vim functionality plugins
+""""" Basics Vim functionality plugins
 
 Plugin 'scrooloose/nerdtree'             " File manager
 
@@ -87,11 +83,11 @@ Plugin 'ap/vim-buftabline'               " Transform buffers in tabs
 """"""" Basic write plugins
 
 Plugin 'tpope/vim-surround'              " Change brackets, parent, etc
-" changeString this/forThis cs"'
-" cs'<p>  - html tags
-" cst"  - to return
-" ds"  - to remove
-" ysiw[  - to add brackets (with space]) (whit no space[)
+" change surround this/forThis cs"'
+" cs'<p> - change surround tag
+" cst" - change surround turn
+" ds" - delete surround
+" ysiw[ - to add brackets (with space]) (whit no space[) copy surround in word
 
 Plugin 'tpope/vim-commentary'            " Simple commentary
 " gcc for comment & uncomment a line
@@ -115,43 +111,52 @@ Plugin 'honza/vim-snippets'              " ultisnips depend
 
 Plugin 'airblade/vim-gitgutter'          " Git helps in files
 
+Plugin 'tpope/vim-fugitive'              " git comands in vim
+" ,gs git status
+" s for stage or u for unstage
+" :Gcommit for commit changes
+" :Gpush push changes
 
-""""""" HTML
 
-Plugin 'mattn/emmet-vim'                 " Emmet for vim 
+""""""" html
+
+Plugin 'mattn/emmet-vim'                 " emmet for vim 
 " example: (just type in document.html)
 " dev.s12.blue>ul>li*5
 " then <ctrl+y>,
 
-Plugin 'vim-scripts/loremipsum'          " Lorem generator
+
+""""""" css
+
+Plugin 'gko/vim-coloresque'              " color preview
 
 
-""""""" CSS
+""""" python
 
-Plugin 'gko/vim-coloresque'              " Color preview
-
-
-""""""" JS
-
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
-
-
-""""" Python
-
-Plugin 'python-mode/python-mode'         " Toolbox
+Plugin 'python-mode/python-mode'         " toolbox
 " shift + k = pydocs
 " ctr + space = autocomplete
 " <leader>r = run pycode
 
-Plugin 'tweekmonster/impsort.vim'        " Sort imports
+Plugin 'tweekmonster/impsort.vim'        " sort imports
 
 
-""""""" Themes
+"""""" Javascript
 
-Plugin 'chriskempson/vim-tomorrow-theme' " Nice theme for vim
+Plugin 'pangloss/vim-javascript' 
 
-Plugin 'ryanoasis/vim-devicons'          " Icons in vim
+Plugin 'MaxMEllon/vim-jsx-pretty'
+
+Plugin 'eslint/eslint'
+
+" Plugin 'leafgarland/typescript-vim'
+
+
+"""" themes
+
+Plugin 'chriskempson/vim-tomorrow-theme' " nice theme for vim
+
+Plugin 'ryanoasis/vim-devicons'          " icons in vim
 " git clone
 " https://github.com/ryanoasis/nerd-fonts.git
 " ./install.sh
@@ -161,60 +166,60 @@ filetype plugin indent on  " required
 
 
 " ===============================================
-"                    Maps
+"                    maps
 " ===============================================
 
-" Leader key
+" leader key
 let mapleader=","
 
-" Change Esc key 
-inoremap ii <Esc>
+" change esc key 
+inoremap ii <esc>
 
-" Some easy moves
-nmap <Leader>x :bd<cr>
-nmap <Leader>q :q<cr>
-nmap <Leader>z :q!<cr>
-nmap <Leader>w :w<cr>
-nmap <Leader>e :wq<cr>
+" some easy moves
+nmap <leader>x :bd<cr>
+nmap <leader>q :q<cr>
+nmap <leader>z :q!<cr>
+nmap <leader>w :w<cr>
+nmap <leader>e :wq<cr>
 
-" Don't have arrow keys in normal mode
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
+" don't have arrow keys in normal mode
+noremap <up> <nop>
+noremap <down> <nop>
+noremap <left> <nop>
+noremap <right> <nop>
 
-" Window navigation
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
+" window navigation
+map <c-h> <c-w>h
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
 
 
 "================================================
-"           Maps plugins & options
+"           maps plugins & options
 "================================================
 
-" Save root file :w!!
-cmap w!! w !sudo dd of=%<Enter>
+" save root file :w!!
+cmap w!! w !sudo dd of=%<enter>
 
-" NERDTree
-nmap <Leader>nt :NERDTreeToggle<cr>
+" nerdtree
+nmap <leader>nt :NERDTreeToggle<cr>
 let NERDTreeWinSize=25
 
-" ImpSort
-nmap <Leader>. :ImpSort<cr>
+" impsort
+nmap <leader>. :ImpSort<cr>
 
-" Buftabline
+" buftabline
 set hidden
-nnoremap <Leader>2 :bnext<cr> 
-nnoremap <Leader>1 :bprev<cr> 
+nnoremap <leader>2 :bnext<cr> 
+nnoremap <leader>1 :bprev<cr> 
 
-" Tagbar
-nmap <F8> :TagbarToggle<cr>
+" tagbar
+nmap <f8> :TagbarToggle<cr>
 let tagbar_width=28
 
 " ctrlp
-let g:ctrlp_map = '<Leader>p'
+let g:ctrlp_map = '<leader>p'
 
 " pymode
 let g:pymode_breakepoint=0
@@ -222,7 +227,7 @@ let g:pymode_folding=0
 let g:pymode_rope=0
 let g:pymode_lint=1
 
-" YCM Options
+" ycm options
 let g:ycm_complete_in_comments=1
 let g:ycm_complete_in_strings=1
 let g:ycm_collect_identifiers_from_comments_and_strings=1
@@ -230,11 +235,14 @@ let g:ycm_autoclose_preview_window_after_completion=1
 let g:ycm_key_list_select_completion=["<tab>"]
 let g:ycm_use_ultisnips_completer=1
 
-" Ultisnips
+" ultisnips
 let g:UltiSnipsListSnippets="<c-k>"
-let g:UltiSnipsExpandTrigger="<Leader>a"
+let g:UltiSnipsExpandTrigger="<leader>a"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTriggeir="<s-tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+" git fugitive
+nmap <leader>gs :G<CR>
 
 
 " ===============================================
@@ -250,6 +258,10 @@ endif
 nmap <F5> :call ToggleRelativeNumber()<cr>
 imap <F5> <Esc>: call ToggleRelativeNumber()<cr>a
 
+" php lint
+map <F2> :!php -l %<CR>
+
+" Relative number
 function! ToggleRelativeNumber()
     if &relativenumber == 1
         set norelativenumber

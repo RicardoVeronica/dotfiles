@@ -4,7 +4,7 @@
 " ===============================================
 "            Add basics configuration
 " ===============================================
-" set mouse=a            " Allow mouse selection
+set mouse=a            " Allow mouse selection
 " set nowrap             " No wrap in long lines
 syntax on              " Color in syntax
 set nocompatible       " Disable vi compatibility mode
@@ -16,8 +16,10 @@ set nobackup           " If you need backup something use Git
 set cursorline         " Highlight in line
 set cursorcolumn       " Highlight in column 
 set showmatch          " Highlight parentheses and brackets
+set clipboard=unnamed  " Copy in VIM stay in your OS clipboard
+set showcmd
 
-" To avoid slow scroll probles
+" To avoid slow scroll issues
 set ttyfast
 set ttyscroll=3
 set lazyredraw
@@ -66,12 +68,15 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
 
-
 """"" Basics Vim functionality plugins
 
 Plugin 'scrooloose/nerdtree'             " File manager
 
-Plugin 'ctrlpvim/ctrlp.vim'              " Helps to find files in a proyect
+" Plugin 'ctrlpvim/ctrlp.vim'              " Helps to find files in a proyect
+
+Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
+Plugin 'junegunn/fzf.vim'
 
 Plugin 'vim-airline/vim-airline'         " Better look in status bar
 
@@ -81,6 +86,9 @@ Plugin 'ap/vim-buftabline'               " Transform buffers in tabs
 
 
 """"""" Basic write plugins
+
+Plugin 'easymotion/vim-easymotion'       " Easy movements
+" <leader> + f
 
 Plugin 'tpope/vim-surround'              " Change brackets, parent, etc
 " change surround this/forThis cs"'
@@ -97,10 +105,13 @@ Plugin 'tpope/vim-commentary'            " Simple commentary
 Plugin 'jiangmiao/auto-pairs'            " Auto close brackets, parent, etc
 
 Plugin 'majutsushi/tagbar'               " Sidebar with functions, vars, etc
+" F8
 
 Plugin 'ervandew/supertab'               " Complete name functions and vars
 
 Plugin 'Valloric/YouCompleteMe'          " Code completion
+
+" Plugin 'neoclide/coc.vim', { 'do': './install.sh' }
 
 Plugin 'SirVer/ultisnips'                " snippets
 
@@ -139,6 +150,7 @@ Plugin 'python-mode/python-mode'         " toolbox
 " <leader>r = run pycode
 
 Plugin 'tweekmonster/impsort.vim'        " sort imports
+" <leader> .
 
 
 """""" Javascript
@@ -149,12 +161,13 @@ Plugin 'MaxMEllon/vim-jsx-pretty'
 
 Plugin 'eslint/eslint'
 
-" Plugin 'leafgarland/typescript-vim'
 
-
-"""" themes
+"""" Themes
 
 Plugin 'chriskempson/vim-tomorrow-theme' " nice theme for vim
+
+
+"""" Icons
 
 Plugin 'ryanoasis/vim-devicons'          " icons in vim
 " git clone
@@ -205,6 +218,7 @@ cmap w!! w !sudo dd of=%<enter>
 " nerdtree
 nmap <leader>nt :NERDTreeToggle<cr>
 let NERDTreeWinSize=25
+let NERDTreeQuitOnOpen=1
 
 " impsort
 nmap <leader>. :ImpSort<cr>
@@ -219,7 +233,11 @@ nmap <f8> :TagbarToggle<cr>
 let tagbar_width=28
 
 " ctrlp
-let g:ctrlp_map = '<leader>p'
+" let g:ctrlp_map = '<leader>p'
+
+" fzf
+map <C-f> <Esc><Esc>:Files!<CR>
+let $FZF_DEFAULT_OPTS='--reverse'
 
 " pymode
 let g:pymode_breakepoint=0
@@ -243,6 +261,9 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 
 " git fugitive
 nmap <leader>gs :G<CR>
+
+" easymotion
+nmap <leader>f <Plug>(easymotion-s2)
 
 
 " ===============================================

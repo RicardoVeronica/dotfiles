@@ -1,6 +1,7 @@
 # Vim
 alias vimrc='vim ~/.vimrc'
 alias nviminit='nvim ~/.config/nvim/init.vim'
+alias nv='nvim'
 
 # Django projects
 # alias manage='python manage.py'
@@ -11,8 +12,7 @@ alias nviminit='nvim ~/.config/nvim/init.vim'
 # alias migrations='python manage.py makemigrations && python manage.py migrate'
 
 # Python
-# alias py2='python'
-# alias py='python3'
+alias pipenvs='cd ~/.local/share/virtualenvs/'
 
 # Vagrant boxes
 # alias vagrantjs='cd ~/Development/vagrantVM/javascript && vagrant up && vagrant ssh'
@@ -37,21 +37,21 @@ alias dcu='docker-compose up'
 
 # Linux comands
 # alias off='sudo init 0'  # Turn off the machine
+# alias open='xdg-open'  # Open files in manjaro
 alias wifi='cd /etc/NetworkManager/system-connections'  # See wifi passwords
 alias hosts='sudo vim /etc/hosts'  # Open hosts file
 alias keys='cd ~/.ssh'  # Go to keys ssh
 alias repos='vim /etc/apt/sources.list'  # Open repository file
 alias open='run-mailcap'  # Open files debian
-# alias open='xdg-open'  # Open files in manjaro
 alias mylinux='lsb_release -a'  # See my linux-repo info
 alias fsociety="curl http://0w.nz/fsociety.ascii"  # Show fsociety logo
 alias speedtest='cd /usr/bin && speedtest.py && cd -'  # Test internet speed
 alias publicip='curl icanhazip.com'
 
+# composer
+# alias composer='php /usr/local/bin/composer/composer.phar'
+
 alias sshadd="eval &(ssh-agent -s)"
 alias sshgithub="ssh-add ~/.ssh/github_rsa"
 alias sshdivio="ssh-add ~/.ssh/divio_rsa"
 alias set="sudo chown -R $USER:$USER"
-
-# composer
-# alias composer='php /usr/local/bin/composer/composer.phar'

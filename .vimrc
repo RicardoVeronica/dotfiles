@@ -117,6 +117,7 @@ Plugin 'SirVer/ultisnips'                " snippets
 
 Plugin 'honza/vim-snippets'              " ultisnips depend
 
+Plugin 'vim-scripts/loremipsum'
 
 """"""" Git
 
@@ -215,10 +216,14 @@ map <c-l> <c-w>l
 " save root file :w!!
 cmap w!! w !sudo dd of=%<enter>
 
+" php lint
+map <F2> :!php -l %<CR>
+
 " nerdtree
 nmap <leader>nt :NERDTreeToggle<cr>
 let NERDTreeWinSize=25
-let NERDTreeQuitOnOpen=1
+" let NERDTreeQuitOnOpen=1
+let g:NERDTreeIgnore = ['^node_modules$']
 
 " impsort
 nmap <leader>. :ImpSort<cr>
@@ -231,9 +236,6 @@ nnoremap <leader>1 :bprev<cr>
 " tagbar
 nmap <f8> :TagbarToggle<cr>
 let tagbar_width=28
-
-" ctrlp
-" let g:ctrlp_map = '<leader>p'
 
 " fzf
 map <C-f> <Esc><Esc>:Files!<CR>
@@ -278,9 +280,6 @@ endif
 " Relative number on/off
 nmap <F5> :call ToggleRelativeNumber()<cr>
 imap <F5> <Esc>: call ToggleRelativeNumber()<cr>a
-
-" php lint
-map <F2> :!php -l %<CR>
 
 " Relative number
 function! ToggleRelativeNumber()

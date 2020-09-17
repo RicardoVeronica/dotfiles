@@ -3,6 +3,11 @@ alias vimrc='vim ~/.vimrc'
 alias nviminit='nvim ~/.config/nvim/init.vim'
 alias nv='nvim'
 
+# Python
+alias pipenvs='cd ~/.local/share/virtualenvs/'
+alias pip='pip3'
+alias python='python3'
+
 # Django projects
 # alias manage='python manage.py'
 # alias startproject='django-admin.py startproject'
@@ -10,24 +15,6 @@ alias nv='nvim'
 # alias check='python manage.py check'
 # alias runserver='python manage.py runserver'
 # alias migrations='python manage.py makemigrations && python manage.py migrate'
-
-# Python
-alias pipenvs='cd ~/.local/share/virtualenvs/'
-alias pip='pip3'
-alias python='python3'
-
-# Vagrant boxes
-# alias vagrantjs='cd ~/Development/vagrantVM/javascript && vagrant up && vagrant ssh'
-# alias vagrantpy='cd ~/Development/vagrantVM/python && vagrant up && vagrant ssh'
-# alias vagrantsql='cd ~/Development/vagrantVM/sql && vagrant up && vagrant ssh'
-
-# Ansible
-# alias ans='cd /etc/ansible'
-
-# Virtualbox - vbs name --type headless, vbc name off
-# alias vbs='VBoxManage startvm'  # Turn on VB machine
-# alias vbc='VBoxManage controlvm'  # Pause, reset or poweroff a VB machine
-# alias vbl='VBoxManage list vms'  # List VB machines
 
 # Docker
 #alias dockerh='docker -H tcp://192.168.80.80:2375'  # Connect to my docker vm
@@ -54,6 +41,18 @@ alias sshdivio="ssh-add ~/.ssh/divio_rsa"
 alias set="sudo chown -R $USER:$USER"
 alias gref="grep -rn"
 
+# Vagrant boxes
+# alias vagrantjs='cd ~/Development/vagrantVM/javascript && vagrant up && vagrant ssh'
+# alias vagrantpy='cd ~/Development/vagrantVM/python && vagrant up && vagrant ssh'
+# alias vagrantsql='cd ~/Development/vagrantVM/sql && vagrant up && vagrant ssh'
+
+# Virtualbox - vbs name --type headless, vbc name off
+# alias vbs='VBoxManage startvm'  # Turn on VB machine
+# alias vbc='VBoxManage controlvm'  # Pause, reset or poweroff a VB machine
+# alias vbl='VBoxManage list vms'  # List VB machines
+
+# Ansible
+# alias ans='cd /etc/ansible'
+
 # composer
 # alias composer='php /usr/local/bin/composer/composer.phar'
-

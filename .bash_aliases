@@ -13,6 +13,8 @@ alias nv='nvim'
 
 # Python
 alias pipenvs='cd ~/.local/share/virtualenvs/'
+alias pip='pip3'
+alias python='python3'
 
 # Vagrant boxes
 # alias vagrantjs='cd ~/Development/vagrantVM/javascript && vagrant up && vagrant ssh'
@@ -30,8 +32,7 @@ alias pipenvs='cd ~/.local/share/virtualenvs/'
 # Docker
 #alias dockerh='docker -H tcp://192.168.80.80:2375'  # Connect to my docker vm
 alias http="docker run -it --rm --net=host clue/httpie"
-alias dps="docker ps"
-alias dcps="docker-compose ps"
+alias sqlite="docker run --rm -it nouchka/sqlite3"
 alias dcr='docker-compose run --rm'
 alias dcu='docker-compose up'
 
@@ -47,11 +48,12 @@ alias mylinux='lsb_release -a'  # See my linux-repo info
 alias fsociety="curl http://0w.nz/fsociety.ascii"  # Show fsociety logo
 alias speedtest='cd /usr/bin && speedtest.py && cd -'  # Test internet speed
 alias publicip='curl icanhazip.com'
-
-# composer
-# alias composer='php /usr/local/bin/composer/composer.phar'
-
 alias sshadd="eval &(ssh-agent -s)"
 alias sshgithub="ssh-add ~/.ssh/github_rsa"
 alias sshdivio="ssh-add ~/.ssh/divio_rsa"
 alias set="sudo chown -R $USER:$USER"
+alias gref="grep -rn"
+
+# composer
+# alias composer='php /usr/local/bin/composer/composer.phar'
+

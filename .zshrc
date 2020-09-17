@@ -101,7 +101,7 @@ source $HOME/.bash_aliases
 
 # Run this when open terminal
 screenfetch
-# tmux
+tmux
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

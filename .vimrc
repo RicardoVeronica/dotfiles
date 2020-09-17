@@ -48,6 +48,8 @@ autocmd FileType py setlocal shiftwidth=4 softtabstop=4
 
 " syntax for django templates
 au BufNewFile,BufRead *.html set filetype=htmldjango
+" syntax for svelte files
+au BufNewFile,BufRead *.svelte set ft=html
 
 
 " ===============================================
@@ -223,7 +225,7 @@ map <F2> :!php -l %<CR>
 nmap <leader>nt :NERDTreeToggle<cr>
 let NERDTreeWinSize=25
 " let NERDTreeQuitOnOpen=1
-let g:NERDTreeIgnore = ['^node_modules$']
+" let g:NERDTreeIgnore = ['^node_modules$']
 
 " impsort
 nmap <leader>. :ImpSort<cr>
@@ -245,7 +247,9 @@ let $FZF_DEFAULT_OPTS='--reverse'
 let g:pymode_breakepoint=0
 let g:pymode_folding=0
 let g:pymode_rope=0
-let g:pymode_lint=1
+let g:pymode_lint_write=0
+let mapleader = ","
+nnoremap <leader>p :Pylint<CR>
 
 " ycm options
 let g:ycm_complete_in_comments=1

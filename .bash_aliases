@@ -1,10 +1,10 @@
 # Vim
 alias vimrc='vim ~/.vimrc'
-alias nviminit='nvim ~/.config/nvim/init.vim'
+alias nvrc='nvim ~/.config/nvim/init.vim'
 alias nv='nvim'
 
 # Python
-alias pipenvs='cd ~/.local/share/virtualenvs/'
+# alias pipenvs='cd ~/.local/share/virtualenvs/'
 alias pip='pip3'
 alias python='python3'
 
@@ -40,6 +40,8 @@ alias sshgithub="ssh-add ~/.ssh/github_rsa"
 alias sshdivio="ssh-add ~/.ssh/divio_rsa"
 alias set="sudo chown -R $USER:$USER"
 alias gref="grep -rn"
+alias lsof="sudo lsof -i tcp:3000"
+# sudo kill -9 [PID]
 
 # Vagrant boxes
 # alias vagrantjs='cd ~/Development/vagrantVM/javascript && vagrant up && vagrant ssh'

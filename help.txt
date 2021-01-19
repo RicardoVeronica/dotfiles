@@ -12,3 +12,6 @@ Install vundle
 Open vim and run :PluginInstall
 Install cmake, build-essential, python3-dev
 Go to .vim/bundle/YouCompleteMe and run python3 install.py
+
+NEOVIM:
+cd ~/.config/nvim/init.vim 

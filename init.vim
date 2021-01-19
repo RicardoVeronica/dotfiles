@@ -17,6 +17,8 @@ set cursorcolumn       " Highlight in column
 set showmatch          " Highlight parentheses and brackets
 set clipboard=unnamed  " Copy in VIM stay in your OS clipboard
 set showcmd
+set ttyfast            "" vim Faster
+set lazyredraw
 
 " Status bar
 set showmode           " Always show mode
@@ -79,6 +81,8 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-scripts/loremipsum'
+Plug 'digitaltoad/vim-pug'
+Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
 call plug#end()
 
 " ===============================================
@@ -125,7 +129,7 @@ map <F2> :!php -l %<CR>
 nmap <leader>nt :NERDTreeToggle<cr>
 let NERDTreeWinSize=25
 " let NERDTreeQuitOnOpen=1
-" let g:NERDTreeIgnore = ['^node_modules$']
+let g:NERDTreeIgnore = ['^node_modules$']
 
 " impsort
 nmap <leader>. :ImpSort<cr>

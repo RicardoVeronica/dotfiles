@@ -119,7 +119,9 @@ Plugin 'SirVer/ultisnips'                " snippets
 
 Plugin 'honza/vim-snippets'              " ultisnips depend
 
-Plugin 'vim-scripts/loremipsum'
+Plugin 'vim-scripts/loremipsum'          " auto lorem
+
+" Plugin 'vim-syntastic/syntastic'
 
 """"""" Git
 
@@ -158,11 +160,11 @@ Plugin 'tweekmonster/impsort.vim'        " sort imports
 
 """""" Javascript
 
-Plugin 'pangloss/vim-javascript' 
+" Plugin 'pangloss/vim-javascript' 
 
-Plugin 'MaxMEllon/vim-jsx-pretty'
+" Plugin 'MaxMEllon/vim-jsx-pretty'
 
-Plugin 'eslint/eslint'
+" Plugin 'eslint/eslint'
 
 
 """" Themes

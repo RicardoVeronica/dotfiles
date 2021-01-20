@@ -26,6 +26,8 @@ alias dcu='docker-compose up'
 # Linux comands
 # alias off='sudo init 0'  # Turn off the machine
 # alias open='xdg-open'  # Open files in manjaro
+alias teclado='setxkbmap -layout'
+# espanish = es, english = us
 alias wifi='cd /etc/NetworkManager/system-connections'  # See wifi passwords
 alias hosts='sudo vim /etc/hosts'  # Open hosts file
 alias keys='cd ~/.ssh'  # Go to keys ssh

@@ -55,6 +55,9 @@ if empty(glob("~/.config/nvim/autoload/plug.vim"))
   endif
 
 call plug#begin('~/.config/nvim/plugged')
+" Plug 'elixir-editors/vim-elixir'
+" Plug 'amiralies/coc-elixir', {'do': 'yarn install && yarn prepack'}
+" Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -79,6 +82,7 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-scripts/loremipsum'
+" Plug 'styled-components/vim-styled-components', {'branch': 'main'}
 call plug#end()
 
 " ===============================================
@@ -163,7 +167,8 @@ let g:coc_global_extensions = [
   \ 'coc-css',
   \ 'coc-python',
   \ 'coc-docker',
-  \ 'coc-markdownlint'
+  \ 'coc-markdownlint',
+  \ 'coc-vimlsp'
   \ ]
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile

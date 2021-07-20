@@ -4,14 +4,20 @@ Exmple:
 ln -s .dotfiles/.vimrc .vimrc
 ln -s .dotfiles/.tmux.conf .tmux.conf
 
-
-For vim IDE:
-
+VIM:
 Install vim 8
 Install vundle
 Open vim and run :PluginInstall
 Install cmake, build-essential, python3-dev
+
 Go to .vim/bundle/YouCompleteMe and run python3 install.py
 
 NEOVIM:
 cd ~/.config/nvim/init.vim 
+
+for:
+[coc.nvim] Error on execute python script: request error nvim_command - Vim(pyxfile):E319: No "python3" provider found. Run ":checkhealth provider"
+try this:
+python3 -m pip install --user --upgrade pynvim
+
+https://github.com/neoclide/coc-snippets/issues/196

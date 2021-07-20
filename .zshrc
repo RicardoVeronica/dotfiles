@@ -102,7 +102,8 @@ source $HOME/.bash_aliases
 # Run this when open terminal
 screenfetch
 tmux
-cd Development/portfolio/
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] &&
+	printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm

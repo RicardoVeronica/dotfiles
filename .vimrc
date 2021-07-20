@@ -42,14 +42,14 @@ set autoindent         " Autoident always on
 
 " Spaces indenting in web languages files
 autocmd FileType py setlocal shiftwidth=4 softtabstop=4
-" autocmd FileType html setlocal shiftwidth=2 softtabstop=2
-" autocmd FileType js setlocal shiftwidth=2 softtabstop=2
-" autocmd FileType css setlocal shiftwidth=2 softtabstop=2
+autocmd FileType html setlocal shiftwidth=2 softtabstop=2
+autocmd FileType js setlocal shiftwidth=2 softtabstop=2
+autocmd FileType css setlocal shiftwidth=2 softtabstop=2
 
 " syntax for django templates
 au BufNewFile,BufRead *.html set filetype=htmldjango
 " syntax for svelte files
-au BufNewFile,BufRead *.svelte set ft=html
+" au BufNewFile,BufRead *.svelte set ft=html
 
 
 " ===============================================
@@ -111,7 +111,7 @@ Plugin 'majutsushi/tagbar'               " Sidebar with functions, vars, etc
 
 Plugin 'ervandew/supertab'               " Complete name functions and vars
 
-Plugin 'Valloric/YouCompleteMe'          " Code completion
+" Plugin 'Valloric/YouCompleteMe'          " Code completion
 
 " Plugin 'neoclide/coc.vim', { 'do': './install.sh' }
 
@@ -174,7 +174,7 @@ Plugin 'chriskempson/vim-tomorrow-theme' " nice theme for vim
 
 """" Icons
 
-Plugin 'ryanoasis/vim-devicons'          " icons in vim
+" Plugin 'ryanoasis/vim-devicons'          " icons in vim
 " git clone
 " https://github.com/ryanoasis/nerd-fonts.git
 " ./install.sh

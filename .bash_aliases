@@ -1,10 +1,13 @@
 # Vim
-alias vimrc='vim ~/.vimrc'
-alias nvimrc='nvim ~/.config/nvim/init.vim'
-alias nvim='~/Downloads/AppImage/nvim.appimage'
+# alias vimrc='vim ~/.vimrc'
+# alias nvim='~/Downloads/AppImage/nvim.appimage'
+alias nvimrc='vim ~/.config/nvim/init.vim'
+
+# Emacs
+alias doom='~/.emacs.d/bin/doom'
 
 # Obsidian
-alias obsidian='~/Downloads/AppImage/Obsidian-0.12.5.AppImage --no-sandbox'
+alias obsidian='~/Documents/AppImages/Obsidian-0.12.10.AppImage --no-sandbox'
 
 # Python
 # alias pipenvs='cd ~/.local/share/virtualenvs/'
@@ -45,6 +48,7 @@ alias sshdivio="ssh-add ~/.ssh/divio_rsa"
 alias set="sudo chown -R $USER:$USER"
 alias gref="grep -rn"  # Find regex in file
 alias lsof="sudo lsof -i tcp:3000"  # Determine which processes are runing
+alias killreact="sudo fuser -n tcp 3000"  # kill port 3000 for react
 # sudo kill -9 [PID]
 
 # Vagrant boxes

@@ -5,7 +5,7 @@
 "            Add basics configuration
 " ===============================================
 set mouse=a            " Allow mouse selection
-" set nowrap             " No wrap in long lines
+set nowrap             " No wrap in long lines
 syntax on              " Color in syntax
 set nocompatible       " Disable vi compatibility mode
 set colorcolumn=79     " Column limit

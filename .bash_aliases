@@ -1,13 +1,13 @@
 # Vim
 # alias vimrc='vim ~/.vimrc'
 # alias nvim='~/Downloads/AppImage/nvim.appimage'
-alias nvimrc='vim ~/.config/nvim/init.vim'
+# alias nvimrc='vim ~/.config/nvim/init.vim'
 
 # Emacs
-alias doom='~/.emacs.d/bin/doom'
+# alias doom='~/.emacs.d/bin/doom'
 
 # Obsidian
-alias obsidian='~/Documents/AppImages/Obsidian-0.12.10.AppImage --no-sandbox'
+# alias obsidian='~/Documents/AppImages/Obsidian-0.12.10.AppImage --no-sandbox'
 
 # Python
 # alias pipenvs='cd ~/.local/share/virtualenvs/'
@@ -24,31 +24,31 @@ alias obsidian='~/Documents/AppImages/Obsidian-0.12.10.AppImage --no-sandbox'
 
 # Docker
 #alias dockerh='docker -H tcp://192.168.80.80:2375'  # Connect to my docker vm
-alias http="docker run -it --rm --net=host clue/httpie"
-alias sqlite="docker run --rm -it nouchka/sqlite3"
-alias dcr='docker-compose run --rm'
-alias dcu='docker-compose up'
+# alias http="docker run -it --rm --net=host clue/httpie"
+# alias sqlite="docker run --rm -it nouchka/sqlite3"
+# alias dcr='docker-compose run --rm'
+# alias dcu='docker-compose up'
 
 # Linux comands
 # alias off='sudo init 0'  # Turn off the machine
 # alias open='xdg-open'  # Open files in manjaro
-alias teclado='setxkbmap -layout' # espanish = es, english = us
-alias wifi='cd /etc/NetworkManager/system-connections'  # See wifi passwords
-alias hosts='sudo vim /etc/hosts'  # Open hosts file
-alias keys='cd ~/.ssh'  # Go to keys ssh
-alias repos='vim /etc/apt/sources.list'  # Open repository file
-alias open='run-mailcap'  # Open files debian
-alias mylinux='lsb_release -a'  # See my linux-repo info
-alias fsociety="curl http://0w.nz/fsociety.ascii"  # Show fsociety logo
-# alias speedtest='cd /usr/bin && speedtest.py && cd -'  # Test internet speed
-alias publicip='curl icanhazip.com'  # See public ip
-alias sshadd="eval &(ssh-agent -s)"
-alias sshgithub="ssh-add ~/.ssh/github_rsa"
-alias sshdivio="ssh-add ~/.ssh/divio_rsa"
-alias set="sudo chown -R $USER:$USER"
-alias gref="grep -rn"  # Find regex in file
-alias lsof="sudo lsof -i tcp:3000"  # Determine which processes are runing
-alias killreact="sudo fuser -n tcp 3000"  # kill port 3000 for react
+# alias teclado='setxkbmap -layout' # espanish = es, english = us
+# alias wifi='cd /etc/NetworkManager/system-connections'  # See wifi passwords
+# alias hosts='sudo vim /etc/hosts'  # Open hosts file
+# alias keys='cd ~/.ssh'  # Go to keys ssh
+# alias repos='vim /etc/apt/sources.list'  # Open repository file
+# alias open='run-mailcap'  # Open files debian
+# alias mylinux='lsb_release -a'  # See my linux-repo info
+# alias fsociety="curl http://0w.nz/fsociety.ascii"  # Show fsociety logo
+# # alias speedtest='cd /usr/bin && speedtest.py && cd -'  # Test internet speed
+# alias publicip='curl icanhazip.com'  # See public ip
+# alias sshadd="eval &(ssh-agent -s)"
+# alias sshgithub="ssh-add ~/.ssh/github_rsa"
+# alias sshdivio="ssh-add ~/.ssh/divio_rsa"
+# alias set="sudo chown -R $USER:$USER"
+# alias gref="grep -rn"  # Find regex in file
+# alias lsof="sudo lsof -i tcp:3000"  # Determine which processes are runing
+# alias killreact="sudo fuser -n tcp 3000"  # kill port 3000 for react
 # sudo kill -9 [PID]
 
 # Vagrant boxes

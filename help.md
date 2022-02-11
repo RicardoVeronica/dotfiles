@@ -28,6 +28,8 @@ cd ~/.config/nvim/init.vim
 
 [github](https://github.com/junegunn/vim-plug)
 
+Run :PlugInstall
+
 ### For this error
 
 [coc.nvim] Error on execute python script:

@@ -1,6 +1,3 @@
-" My .vimrc configuration
-" setcain - https://github.com/setcain/dotfiles/.vimrc
-
 " ===============================================
 "            Add basics configuration
 " ===============================================

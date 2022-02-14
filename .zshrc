@@ -25,4 +25,4 @@ export EDITOR=nvim;
 # alias w='nitrogen --set-zoom-fill --random ~/Pictures/wallpapers'
 
 # active mose pad awesome
-# xinput set-prop "$(xinput list --name-only | grep -i touch)" "libinput Tapping Enabled" 1
+xinput set-prop "$(xinput list --name-only | grep -i touch)" "libinput Tapping Enabled" 1

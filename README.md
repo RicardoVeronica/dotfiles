@@ -73,4 +73,5 @@ cd ~/.config/awesome/rc.lua
 ### Ranger
 
 ```sh
+rifle.conf
 ```

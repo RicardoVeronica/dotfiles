@@ -1,3 +1,4 @@
+# sets
 syntax on                                 " color in syntax
 set nocompatible                          " disable vi compatibility mode
 set mouse=a                               " allow mouse selector
@@ -23,16 +24,19 @@ set autoindent                            " auto indent always on
 set shiftwidth=2                          " space in identation
 set softtabstop=2                         " same identation when run back
 
-
+" leader
 let mapleader = ","
 
+" maps
 inoremap ii <esc>
-
 nmap <leader>x :bd<cr>
 nmap <leader>q :q<cr>
 nmap <leader>z :q!<cr>
 nmap <leader>w :w<cr>
 nmap <leader>e :wq<cr>
+
+nnoremap <leader>2 :bnext<cr>
+nnoremap <leader>1 :bprev<cr>
 
 noremap <up> <nop>
 noremap <down> <nop>
@@ -44,7 +48,7 @@ map <c-j> <c-w>j
 map <c-k> <c-w>k
 map <c-l> <c-w>l
 
-
+" functions
 function! ToggleRelativeNumber()
 	if &relativenumber == 1
 		set norelativenumber
@@ -57,7 +61,7 @@ endfunction
 nmap <F5> :call ToggleRelativeNumber()<cr>
 imap <F5> <Esc>: call ToggleRelativeNumber()<cr>a
 
-
+" plugins
 call plug#begin('~/.config/nvim/plugged')
 Plug 'elixir-editors/vim-elixir'
 Plug 'amiralies/coc-elixir', {'do': 'yarn install && yarn prepack'}
@@ -91,29 +95,32 @@ Plug 'vim-scripts/loremipsum'
 Plug 'styled-components/vim-styled-components', {'branch': 'main'}
 call plug#end()
 
-
+" gruvbox config
 colorscheme gruvbox
 
+" nerdtree config
 nmap <leader>nt :NERDTreeToggle<cr>
 let NERDTreeWinSize=25
 let NERDTreeQuitOnOpen=1
 let g:NERDTreeIgnore = ['^node_modules$']
 
-set hidden
-nnoremap <leader>2 :bnext<cr>
-nnoremap <leader>1 :bprev<cr>
-
+" fzf config
 map <C-f> <Esc><Esc>:Files!<CR>
 let $FZF_DEFAULT_OPTS='--reverse'
 
+" fugitive config
 nmap <leader>gs :G<CR>
 
+" easymotion config
 nmap <leader>f <Plug>(easymotion-s2)
 
+" ultisnips config
 let g:UltiSnipsExpandTrigger="<leader>a"
 
+" prettier config
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
+" coc config
 let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-tsserver',

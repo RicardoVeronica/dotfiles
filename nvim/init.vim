@@ -16,6 +16,7 @@ let mapleader = ","
 
 " plugins
 call plug#begin('~/.config/nvim/plugged')
+Plug 'tpope/vim-rails'
 Plug 'elixir-editors/vim-elixir'
 Plug 'amiralies/coc-elixir', {'do': 'yarn install && yarn prepack'}
 Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}

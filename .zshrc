@@ -21,6 +21,9 @@ export VISUAL=nvim;
 export EDITOR=nvim;
 
 # aliases
+neofetch
+tmux
+
 # nitrongen for awesomewm random wallpapers
 # alias w='nitrogen --set-zoom-fill --random ~/Pictures/wallpapers'
 

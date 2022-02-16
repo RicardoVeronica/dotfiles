@@ -17,8 +17,8 @@ fi
 . /opt/asdf-vm/asdf.sh
 
 # default editor for ranger
-export VISUAL=nvim;
-export EDITOR=nvim;
+# export VISUAL=nvim;
+# export EDITOR=nvim;
 
 # aliases
 neofetch
@@ -28,4 +28,4 @@ tmux
 # alias w='nitrogen --set-zoom-fill --random ~/Pictures/wallpapers'
 
 # active mose pad awesome
-xinput set-prop "$(xinput list --name-only | grep -i touch)" "libinput Tapping Enabled" 1
+# xinput set-prop "$(xinput list --name-only | grep -i touch)" "libinput Tapping Enabled" 1

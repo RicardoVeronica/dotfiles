@@ -54,6 +54,12 @@ No "python3" provider found. Run ":checkhealth provider"
 python3 -m pip install --user --upgrade pynvim
 ```
 
+### If you don't have pip
+
+```sh
+sudo pacman -S python-pip
+```
+
 [source](https://github.com/neoclide/coc-snippets/issues/196)
 
 ---

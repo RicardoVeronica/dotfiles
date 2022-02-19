@@ -124,3 +124,7 @@ Link to my .conf
 ```sh
 ln -s ~/.dotfiles/rifle.conf rifle.conf
 ```
+
+### ZSH with p10k
+
+[youtube](https://www.youtube.com/watch?v=m73YqImFd4o&t=901s)

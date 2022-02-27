@@ -1,4 +1,4 @@
-" coc config
+" install this extensions
 let g:coc_global_extensions = [
   \ 'coc-snippets',
   \ 'coc-tsserver',
@@ -10,5 +10,6 @@ let g:coc_global_extensions = [
   \ 'coc-python',
   \ 'coc-docker',
   \ 'coc-markdownlint',
-  \ 'coc-vimlsp'
+  \ 'coc-vimlsp',
+  \ 'coc-solargraph'
   \ ]

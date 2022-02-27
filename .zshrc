@@ -15,7 +15,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-# ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -107,26 +107,22 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-# alias vifm="~/.config/vifm/scripts/vifmrun"
+alias zshc="vim ~/.zshrc"
+alias vimc="vim ~/.vim"
+alias nvimc="vim ~/.config/nvim/init.vim"
+alias awesomec="vim ~/.config/awesome/rc.lua"
 alias w="nitrogen --set-tiled --random ~/Pictures/wallpapers"
+alias ssha="eval $(ssh-agent -s)"
+alias sshg="ssh-add ~/.ssh/github_rsa"
 
 # asdf
-# install asdf:
-# https://asdf-vm.com/guide/getting-started.html#_1-install-dependencies
-# for pacman and zsh:
-# git clone https://aur.archlinux.org/asdf-vm.git && cd asdf-vm && makepkg -si
 . /opt/asdf-vm/asdf.sh
-
-# source /usr/share/zsh-theme-powerlevel110k/powerlevel110k.zsh-them
-source ~/.powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
-# Fix tab in mouse pad
-xinput set-prop "$(xinput list --name-only | grep -i touch)" "libinput Tapping Enabled" 1
-# Change image when a terminal is opened
-# nitrogen --set-tiled --random ~/Pictures/wallpapers
+# Fix tab in mouse pad for awesome
+# xinput set-prop "$(xinput list --name-only | grep -i touch)" "libinput Tapping Enabled" 1
+
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme

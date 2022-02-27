@@ -8,7 +8,7 @@ set mouse=a                               " allow mouse selector
 set clipboard=unnamed                     " clipboard functionality
 set background=dark                       " background dark
 set colorcolumn=79                        " colum limit
-set scrolloff=5                           " 5 spaceses while scrolling
+set scrolloff=3                           " 5 spaceses while scrolling
 set undodir=~/.config/nvim/undodir        " backup for undofile
 set undofile                              " redo always present
 set nohlsearch                            " no recursive result in search

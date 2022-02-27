@@ -11,6 +11,43 @@ ln -s .dotfiles/.vimrc .vimrc
 ln -s .dotfiles/.tmux.conf .tmux.conf
 ```
 
+### SSH
+
+Create dir ~/.ssh
+
+```sh
+# create ssh keys
+ssh-keygen
+```
+
+Paste the id_rsa.pub in Github
+
+```sh
+# add private key to the ssh agent
+ssh-add [private key]
+```
+
+---
+
+### Paru
+
+[paru](https://github.com/Morganamilo/paru)
+
+```sh
+# clone project
+git clone https://aur.archlinux.org/paru
+```
+
+Go inside paru dir
+
+```sh
+# compile paru - syncdep and install
+makepkg -si PKGBUILD
+# install dependencies
+```
+
+Config file: /etc/paru.conf
+
 ---
 
 ### VIM with bundle and YouCompleteMe **(deprecated)**
@@ -33,6 +70,8 @@ python3 install.py
 ```sh
 cd ~/.config/nvim/init.vim
 ```
+
+Install nodejs with asdf
 
 #### Install Plug
 
@@ -73,6 +112,22 @@ cd ~/.config/alacritty/alacritty.yml
 From DistroTube
 [gitlab](https://gitlab.com/dwt1/st-distrotube)
 
+---
+
+### asdf
+
+```sh
+sudo pacman -S asdf
+```
+
+In .zshrc
+
+```sh
+. /opt/asdf-vm/asdf.sh
+```
+
+---
+
 ### Awesome config
 
 ```sh
@@ -92,9 +147,14 @@ sudo pacman -S nitrogen
 ```
 
 From CopyCat
+
 [github](https://github.com/lcpz/awesome-copycats)
 
+---
+
 ### Rofi
+
+Create ~/.config/rofi/config.rasi
 
 ```sh
 ln -s ~/.dotfiles/config.rasi
@@ -105,6 +165,8 @@ From Eric Murphy
 [github](https://github.com/ericmurphyxyz/archrice)
 [youtube](https://www.youtube.com/watch?v=TutfIwxSE_s&t=424s)
 
+---
+
 ### Ranger
 
 Copy all config in ~/.config/ranger
@@ -113,10 +175,16 @@ Copy all config in ~/.config/ranger
 ranger --copy-config=all
 ```
 
-Install w3m for imamge viewer inside ranger
+Install w3m for imamge viewer and mpv movie viewer inside ranger
 
 ```sh
-sudo pacman -S w3m
+sudo pacman -S w3m mpv
+```
+
+Command to copy the config in your home
+
+```sh
+ranger --copy-config=all
 ```
 
 Link to my .conf
@@ -125,6 +193,76 @@ Link to my .conf
 ln -s ~/.dotfiles/rifle.conf rifle.conf
 ```
 
+---
+
 ### ZSH with p10k
 
 [youtube](https://www.youtube.com/watch?v=m73YqImFd4o&t=901s)
+
+Install zsh
+
+```sh
+sudo pacman -S zsh zsh-completions
+```
+
+Change shell (when you install oh-my-zsh, auto change this)
+
+```sh
+chsh -s /bin/zsh
+```
+
+Install oh-my-zsh
+
+[oh-my-zsh](https://ohmyz.sh/#install)
+
+Command
+
+```sh
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+Link to ~/.dotfiles/.zshrc
+
+#### Install powerlevel
+
+```sh
+paru zsh-theme-powerlevel10k-git
+# powerline-common awesome-terminal-fonts ttf-meslo-nerd-font-powerlevel10k
+```
+
+Ejecutar
+
+```sh
+echo 'source /usr/share/zsh-theme-powerlevel110k/powerlevel10k.zsh-theme' >>~/.zshrc
+```
+
+Instalador
+
+```sh
+pk10 configure
+```
+
+Highlighting and autosugestions
+
+```sh
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
+# ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+git clone https://github.com/zsh-users/zsh-autosuggestions
+# ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+```
+
+In .zshrc
+
+```sh
+plugins=(
+zsh-autosuggestions
+zsh-syntax-highlighting
+)
+```
+
+### Qtile
+
+```sh
+ln -s ~/.dotfiles/config.py ~/.config/qtile/config.py
+```

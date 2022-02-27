@@ -104,18 +104,18 @@ local terminal     = "alacritty"
 local vi_focus     = false -- vi-like client focus https://github.com/lcpz/awesome-copycats/issues/275
 local cycle_prev   = true  -- cycle with only the previously focused client or all https://github.com/lcpz/awesome-copycats/issues/274
 local editor       = os.getenv("nvim") or "nvim"
-local browser      = "vivaldi"
+local browser      = "brave"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "1", "2", "3", "4", "5" }
+awful.util.tagnames = { " A ", " B ", " C ", " D ", " E " }
 awful.layout.layouts = {
-    -- awful.layout.suit.floating,
     awful.layout.suit.tile,
+    awful.layout.suit.floating,
     -- awful.layout.suit.tile.left,
     -- awful.layout.suit.tile.bottom,
     -- awful.layout.suit.tile.top,
-    --awful.layout.suit.fair,
-    --awful.layout.suit.fair.horizontal,
+    awful.layout.suit.fair,
+    awful.layout.suit.fair.horizontal,
     --awful.layout.suit.spiral,
     --awful.layout.suit.spiral.dwindle,
     --awful.layout.suit.max,
@@ -286,8 +286,8 @@ globalkeys = mytable.join(
               {description = "view previous", group = "tag"}),
     awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
               {description = "view next", group = "tag"}),
-    awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
-              {description = "go back", group = "tag"}),
+    -- awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
+    --           {description = "go back", group = "tag"}),
 
     -- Non-empty tag browsing
     -- awful.key({ altkey }, "Left", function () lain.util.tag_view_nonempty(-1) end,
@@ -296,18 +296,18 @@ globalkeys = mytable.join(
     --           {description = "view  previous nonempty", group = "tag"}),
 
     -- Default client focus
-    awful.key({ altkey,           }, "j",
-        function ()
-            awful.client.focus.byidx( 1)
-        end,
-        {description = "focus next by index", group = "client"}
-    ),
-    awful.key({ altkey,           }, "k",
-        function ()
-            awful.client.focus.byidx(-1)
-        end,
-        {description = "focus previous by index", group = "client"}
-    ),
+    -- awful.key({ altkey,           }, "j",
+    --     function ()
+    --         awful.client.focus.byidx( 1)
+    --     end,
+    --     {description = "focus next by index", group = "client"}
+    -- ),
+    -- awful.key({ altkey,           }, "k",
+    --     function ()
+    --         awful.client.focus.byidx(-1)
+    --     end,
+    --     {description = "focus previous by index", group = "client"}
+    -- ),
 
     -- By-direction client focus
     awful.key({ modkey }, "j",
@@ -400,22 +400,22 @@ globalkeys = mytable.join(
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
 
-    awful.key({ modkey, altkey    }, "l",     function () awful.tag.incmwfact( 0.05)          end,
-              {description = "increase master width factor", group = "layout"}),
-    awful.key({ modkey, altkey    }, "h",     function () awful.tag.incmwfact(-0.05)          end,
-              {description = "decrease master width factor", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1, nil, true) end,
-              {description = "increase the number of master clients", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "l",     function () awful.tag.incnmaster(-1, nil, true) end,
-              {description = "decrease the number of master clients", group = "layout"}),
-    awful.key({ modkey, "Control" }, "h",     function () awful.tag.incncol( 1, nil, true)    end,
-              {description = "increase the number of columns", group = "layout"}),
-    awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
-              {description = "decrease the number of columns", group = "layout"}),
-    awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
-              {description = "select next", group = "layout"}),
-    awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
-              {description = "select previous", group = "layout"}),
+    -- awful.key({ modkey, altkey    }, "l",     function () awful.tag.incmwfact( 0.05)          end,
+    --           {description = "increase master width factor", group = "layout"}),
+    -- awful.key({ modkey, altkey    }, "h",     function () awful.tag.incmwfact(-0.05)          end,
+    --           {description = "decrease master width factor", group = "layout"}),
+    -- awful.key({ modkey, "Shift"   }, "h",     function () awful.tag.incnmaster( 1, nil, true) end,
+    --           {description = "increase the number of master clients", group = "layout"}),
+    -- awful.key({ modkey, "Shift"   }, "l",     function () awful.tag.incnmaster(-1, nil, true) end,
+    --           {description = "decrease the number of master clients", group = "layout"}),
+    -- awful.key({ modkey, "Control" }, "h",     function () awful.tag.incncol( 1, nil, true)    end,
+    --           {description = "increase the number of columns", group = "layout"}),
+    -- awful.key({ modkey, "Control" }, "l",     function () awful.tag.incncol(-1, nil, true)    end,
+    --           {description = "decrease the number of columns", group = "layout"}),
+    -- awful.key({ modkey,           }, "space", function () awful.layout.inc( 1)                end,
+    --           {description = "select next", group = "layout"}),
+    -- awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
+    --           {description = "select previous", group = "layout"}),
 
     awful.key({ modkey, "Control" }, "n", function ()
         local c = awful.client.restore()
@@ -438,10 +438,10 @@ globalkeys = mytable.join(
     --           {description = "show weather", group = "widgets"}),
 
     -- Screen brightness
-    awful.key({ }, "XF86MonBrightnessUp", function () os.execute("xbacklight -inc 10") end,
-              {description = "+10%", group = "hotkeys"}),
-    awful.key({ }, "XF86MonBrightnessDown", function () os.execute("xbacklight -dec 10") end,
-              {description = "-10%", group = "hotkeys"}),
+    -- awful.key({ }, "XF86MonBrightnessUp", function () os.execute("xbacklight -inc 10") end,
+    --           {description = "+10%", group = "hotkeys"}),
+    -- awful.key({ }, "XF86MonBrightnessDown", function () os.execute("xbacklight -dec 10") end,
+    --           {description = "-10%", group = "hotkeys"}),
 
     -- ALSA volume control
     awful.key({ altkey }, "Up",
@@ -522,8 +522,8 @@ globalkeys = mytable.join(
     --           {description = "copy gtk to terminal", group = "hotkeys"}),
 
     -- User programs
-    -- awful.key({ modkey }, "q", function () awful.spawn(browser) end,
-    --           {description = "run browser", group = "launcher"}),
+    awful.key({ modkey }, "q", function () awful.spawn(browser) end,
+              {description = "run browser", group = "launcher"}),
 
     -- Default
     --[[ Menubar
@@ -729,7 +729,7 @@ awful.rules.rules = {
 
     -- Add titlebars to normal clients and dialogs
     -- { rule_any = {type = { "normal", "dialog" }
-      -- }, properties = { titlebars_enabled = true }
+    --   }, properties = { titlebars_enabled = true }
     -- },
 
     -- Set Firefox to always map on the tag named "2" on screen 1.

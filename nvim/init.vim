@@ -14,37 +14,42 @@
 " leader key
 let mapleader = ","
 
-" plugins
 call plug#begin('~/.config/nvim/plugged')
+" programming
+Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-rails'
 Plug 'elixir-editors/vim-elixir'
 Plug 'amiralies/coc-elixir', {'do': 'yarn install && yarn prepack'}
 Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
 Plug 'elixir-lsp/elixir-ls'
+" Plug 'pangloss/vim-javascript'
+" Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'styled-components/vim-styled-components', {'branch': 'main'}
+Plug 'vim-scripts/loremipsum'
+Plug 'gko/vim-coloresque'
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'w0rp/ale'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'morhetz/gruvbox'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'ap/vim-buftabline'
+
+" helpers
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
-Plug 'majutsushi/tagbar'
-Plug 'ervandew/supertab'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-Plug 'mattn/emmet-vim'
-Plug 'gko/vim-coloresque'
-Plug 'pangloss/vim-javascript'
-Plug 'MaxMEllon/vim-jsx-pretty'
+
+" vim look
+Plug 'morhetz/gruvbox'
 Plug 'chriskempson/vim-tomorrow-theme'
 Plug 'ryanoasis/vim-devicons'
-Plug 'vim-scripts/loremipsum'
-Plug 'styled-components/vim-styled-components', {'branch': 'main'}
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'majutsushi/tagbar'
+Plug 'ap/vim-buftabline'
 call plug#end()

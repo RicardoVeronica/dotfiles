@@ -22,8 +22,6 @@ set clipboard=unnamed                     " copy in VIM stay in your OS clipboar
 set background=dark                       " background dark
 set colorcolumn=79                        " column limit
 set scrolloff=5                           " scroll with rows chance
-set undodir=~/.vim/undodir                " backup for undofiles
-set undofile                              " redo always present
 set nohlsearch                            " no recursive result in search
 set nowrap                                " no wrap in files
 set number                                " show a line number

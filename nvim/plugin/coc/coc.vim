@@ -7,9 +7,8 @@ let g:coc_global_extensions = [
   \ 'coc-json',
   \ 'coc-html',
   \ 'coc-css',
-  \ 'coc-python',
-  \ 'coc-docker',
-  \ 'coc-markdownlint',
   \ 'coc-vimlsp',
-  \ 'coc-solargraph'
+  \ 'coc-solargraph',
+  \ 'coc-markdownlint',
+  \ 'coc-docker'
   \ ]

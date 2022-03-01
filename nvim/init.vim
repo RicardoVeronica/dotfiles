@@ -16,27 +16,42 @@ let mapleader = ","
 
 call plug#begin('~/.config/nvim/plugged')
 " programming
-Plug 'mattn/emmet-vim'
-Plug 'tpope/vim-rails'
-Plug 'elixir-editors/vim-elixir'
-Plug 'amiralies/coc-elixir', {'do': 'yarn install && yarn prepack'}
-Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
-Plug 'elixir-lsp/elixir-ls'
-" Plug 'pangloss/vim-javascript'
-" Plug 'MaxMEllon/vim-jsx-pretty'
-Plug 'styled-components/vim-styled-components', {'branch': 'main'}
-Plug 'vim-scripts/loremipsum'
-Plug 'gko/vim-coloresque'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'w0rp/ale'
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdtree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+" ruby
+Plug 'tpope/vim-rails'
+
+" elixir
+Plug 'elixir-editors/vim-elixir'
+Plug 'amiralies/coc-elixir', {'do': 'yarn install && yarn prepack'}
+Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
+" Plug 'elixir-lsp/elixir-ls'
+
+" js
+Plug 'pangloss/vim-javascript'
+Plug 'MaxMEllon/vim-jsx-pretty'
+
+" css
+Plug 'styled-components/vim-styled-components', {'branch': 'main'}
+Plug 'gko/vim-coloresque'
+
+" html
+Plug 'mattn/emmet-vim'
+Plug 'vim-scripts/loremipsum'
+
+" git
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+
+" python
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 " helpers
 Plug 'easymotion/vim-easymotion'

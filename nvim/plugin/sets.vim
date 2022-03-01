@@ -9,8 +9,6 @@ set clipboard=unnamed                     " clipboard functionality
 set background=dark                       " background dark
 set colorcolumn=79                        " colum limit
 set scrolloff=3                           " 5 spaceses while scrolling
-set undodir=~/.config/nvim/undodir        " backup for undofile
-set undofile                              " redo always present
 set nohlsearch                            " no recursive result in search
 set nowrap                                " no wrap in files
 set number                                " show a line number

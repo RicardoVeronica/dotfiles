@@ -15,56 +15,38 @@
 let mapleader = ","
 
 call plug#begin('~/.config/nvim/plugged')
-" programming
-Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-Plug 'w0rp/ale'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'ervandew/supertab'
-Plug 'scrooloose/nerdtree'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-
-" ruby
-Plug 'tpope/vim-rails'
-
-" elixir
-Plug 'elixir-editors/vim-elixir'
-Plug 'amiralies/coc-elixir', {'do': 'yarn install && yarn prepack'}
-Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}
-" Plug 'elixir-lsp/elixir-ls'
-
-" js
-Plug 'pangloss/vim-javascript'
-Plug 'MaxMEllon/vim-jsx-pretty'
-
-" css
-Plug 'styled-components/vim-styled-components', {'branch': 'main'}
-Plug 'gko/vim-coloresque'
-
-" html
-Plug 'mattn/emmet-vim'
-Plug 'vim-scripts/loremipsum'
-
-" git
-Plug 'airblade/vim-gitgutter'
-Plug 'tpope/vim-fugitive'
-
-" python
-Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-
+" vim look
+Plug 'morhetz/gruvbox'
+Plug 'ryanoasis/vim-devicons'
+Plug 'vim-airline/vim-airline'
+Plug 'ap/vim-buftabline'
 " helpers
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
-
-" vim look
-Plug 'morhetz/gruvbox'
-Plug 'chriskempson/vim-tomorrow-theme'
-Plug 'ryanoasis/vim-devicons'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'majutsushi/tagbar'
-Plug 'ap/vim-buftabline'
+" programming general
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'w0rp/ale'
+Plug 'ervandew/supertab'
+Plug 'scrooloose/nerdtree'
+Plug 'airblade/vim-gitgutter'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+" python
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+" elixir
+Plug 'elixir-editors/vim-elixir'
+Plug 'amiralies/coc-elixir', {'do': 'yarn install && yarn prepack'}
+Plug 'elixir-lsp/elixir-ls'
+" js
+Plug 'pangloss/vim-javascript'
+Plug 'MaxMEllon/vim-jsx-pretty'
+" css
+Plug 'styled-components/vim-styled-components', {'branch': 'main'}
+Plug 'gko/vim-coloresque'
+" html
+Plug 'mattn/emmet-vim'
+Plug 'vim-scripts/loremipsum'
 call plug#end()

@@ -17,3 +17,5 @@ noremap <up> <nop>
 noremap <down> <nop>
 noremap <right> <nop>
 noremap <left> <nop>
+noremap <leader>> 10<C-w>>
+noremap <leader>< 10<C-w><

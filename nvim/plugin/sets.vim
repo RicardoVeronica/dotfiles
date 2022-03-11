@@ -36,3 +36,7 @@ set softtabstop=2                         " same identation when run back
 set expandtab                             " space no tabs
 set autoindent                            " auto indent always on
 set smartindent                           " better indentation
+
+" python and django templates
+autocmd FileType py setlocal shiftwidth=4 softtabstop=4
+au BufNewFile,BufRead *.html set filetype=htmldjango

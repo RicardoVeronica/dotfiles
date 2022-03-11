@@ -6,6 +6,7 @@ let g:coc_global_extensions = [
   \ 'coc-prettier',
   \ 'coc-json',
   \ 'coc-html',
+  \ 'coc-python',
   \ 'coc-css',
   \ 'coc-vimlsp',
   \ 'coc-solargraph',

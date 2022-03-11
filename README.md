@@ -2,16 +2,7 @@
 
 ## Help
 
-### Create symbolic links into home/user/
-
-- Exmple
-
-```sh
-ln -s .dotfiles/.vimrc .vimrc
-ln -s .dotfiles/.tmux.conf .tmux.conf
-```
-
-### SSH
+### SSH for Github
 
 Create dir ~/.ssh
 
@@ -23,18 +14,37 @@ ssh-keygen
 Paste the id_rsa.pub in Github
 
 ```sh
+# open agent
+eval $(ssh-agent -s)
+
 # add private key to the ssh agent
 ssh-add [private key]
 ```
 
 ---
 
+### Create symbolic links into ~/
+
+- move dotfiles/ to .dotfiles/
+
+```sh
+mv dotfiles .dotfiles
+```
+
+- Exmple
+
+```sh
+ln -s .dotfiles/.vimrc .vimrc
+ln -s .dotfiles/.tmux.conf .tmux.conf
+```
+
 ### Paru
 
 [paru](https://github.com/Morganamilo/paru)
 
+#### Clone project
+
 ```sh
-# clone project
 git clone https://aur.archlinux.org/paru
 ```
 
@@ -43,10 +53,23 @@ Go inside paru dir
 ```sh
 # compile paru - syncdep and install
 makepkg -si PKGBUILD
-# install dependencies
 ```
 
 Config file: /etc/paru.conf
+
+```sh
+# uncomment
+BottonUp
+```
+
+#### Add color to paru and pacman
+
+Config file: /etc/pacman.conf
+
+```sh
+# uncomment
+color
+```
 
 ---
 
@@ -73,15 +96,15 @@ cd ~/.config/nvim/init.vim
 
 Install nodejs with asdf
 
-#### Install Plug
+#### Install Vim Plug
 
-[github](https://github.com/junegunn/vim-plug)
+[vim-plug](https://github.com/junegunn/vim-plug)
 
 ```vim
 :PlugInstall
 ```
 
-#### CoC Error
+#### CoC Error in NEOVIM
 
 [coc.nvim] Error on execute python script:
 request error nvim_command - Vim(pyxfile):E319:
@@ -109,8 +132,7 @@ sudo pacman -S python-pip
 cd ~/.config/alacritty/alacritty.yml
 ```
 
-From DistroTube
-[gitlab](https://gitlab.com/dwt1/st-distrotube)
+[distrotube gitlab](https://gitlab.com/dwt1/st-distrotube)
 
 ---
 
@@ -148,7 +170,7 @@ sudo pacman -S nitrogen
 
 From CopyCat
 
-[github](https://github.com/lcpz/awesome-copycats)
+[copycat](https://github.com/lcpz/awesome-copycats)
 
 ---
 

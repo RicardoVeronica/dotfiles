@@ -57,6 +57,43 @@ au BufNewFile,BufRead *.html set filetype=htmldjango
 " leader
 let mapleader=","
 
+" pluggins
+call plug#begin()
+" look
+
+" colors
+Plug 'morhetz/gruvbox'
+" icons everywhere
+Plug 'ryanoasis/vim-devicons'
+" better look at bottom
+Plug 'vim-airline/vim-airline'
+
+" utilities
+
+" file menu
+Plug 'scrooloose/nerdtree'
+" tabs in vim
+Plug 'ap/vim-buftabline'
+" find things easy
+Plug 'easymotion/vim-easymotion'
+" surround
+Plug 'tpope/vim-surround'
+" close pair like parenthesis
+Plug 'jiangmiao/auto-pairs'
+
+" programming
+
+" snippets
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+" snippets works with tab
+Plug 'ervandew/supertab'
+" easy commentaries
+Plug 'tpope/vim-commentary'
+call plug#end()
+
+" set color
+colorscheme gruvbox
+
 " maps
 inoremap ii <esc>
 nmap <leader>x :bd<cr>
@@ -76,9 +113,6 @@ noremap <up> <nop>
 noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
-
-" set color
-colorscheme gruvbox
 
 " functions
 function! ToggleRelativeNumber()

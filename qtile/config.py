@@ -26,7 +26,7 @@
 
 from typing import List  # noqa: F401
 
-from autostart_config import autostart
+from autostart_config import autostart  # autostart_config
 
 from libqtile import bar, layout, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
@@ -78,6 +78,7 @@ keys = [
     # Launchers
     Key([mod], "Return", lazy.spawn('gnome-terminal'), desc="Launch terminal"),
     Key([mod], "m", lazy.spawn('rofi -show drun'), desc="Launch rofi menu"),
+    Key([mod], "n", lazy.spawn('nautilus'), desc="Launch file manager"),
     Key([mod], "b", lazy.spawn('brave'), desc="Launch brave browser"),
     Key([mod], "f", lazy.spawn('firefox'), desc="Launch firefox browser"),
     Key([mod], "o", lazy.spawn('obsidian'), desc="Launch obsidian "),
@@ -88,6 +89,15 @@ keys = [
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     # Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+
+    # volume
+    Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%")),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%")),
+    Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
+
+    # brightness
+    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +5%")),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 5%-")),
 ]
 
 groups = [Group(i) for i in "12345"]
@@ -117,7 +127,7 @@ for i in groups:
     )
 
 layouts = [
-    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=4),
+    layout.Columns(border_focus_stack=["#d75f5f", "#8f3d3d"], border_width=2),
     layout.Max(),
     # Try more layouts by unleashing below layouts.
     # layout.Stack(num_stacks=2),
@@ -135,16 +145,16 @@ layouts = [
 widget_defaults = dict(
     font="sans",
     fontsize=20,
-    padding=5,
+    padding=8,
 )
 extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        bottom=bar.Bar(
+        top=bar.Bar(
             [
-                widget.CurrentLayout(),
                 widget.GroupBox(),
+                widget.CurrentLayout(),
                 widget.Prompt(),
                 widget.WindowName(),
                 widget.Chord(
@@ -157,9 +167,9 @@ screens = [
                 # widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
                 widget.Systray(),
                 widget.Clock(format="%d-%m-%Y %a %I:%M %p"),
-                widget.QuickExit(),
+                # widget.QuickExit(),
             ],
-            24,
+            25,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),

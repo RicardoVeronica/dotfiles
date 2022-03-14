@@ -6,7 +6,7 @@
 # Emacs
 # alias doom='~/.emacs.d/bin/doom'
 
-# Obsidian
+# Obsidian AppImage
 # alias obsidian='~/Documents/AppImages/Obsidian-0.12.10.AppImage --no-sandbox'
 
 # Python
@@ -23,7 +23,7 @@
 # alias migrations='python manage.py makemigrations && python manage.py migrate'
 
 # Docker
-#alias dockerh='docker -H tcp://192.168.80.80:2375'  # Connect to my docker vm
+# alias dockerh='docker -H tcp://192.168.80.80:2375'  # Connect to my docker vm
 # alias http="docker run -it --rm --net=host clue/httpie"
 # alias sqlite="docker run --rm -it nouchka/sqlite3"
 # alias dcr='docker-compose run --rm'

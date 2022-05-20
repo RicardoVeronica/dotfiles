@@ -114,6 +114,8 @@ alias awesomec="vim ~/.config/awesome/rc.lua"
 alias w="nitrogen --set-tiled --random ~/Pictures/wallpapers"
 alias ssha="eval $(ssh-agent -s)"
 alias sshg="ssh-add ~/.ssh/github_rsa"
+alias es="setxkbmap -layout es"
+alias en="setxkbmap -layout en"
 
 # asdf
 . /opt/asdf-vm/asdf.sh

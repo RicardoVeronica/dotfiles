@@ -81,6 +81,7 @@ keys = [
     Key([mod], "n", lazy.spawn('nautilus'), desc="Launch file manager"),
     Key([mod], "b", lazy.spawn('brave'), desc="Launch brave browser"),
     Key([mod], "f", lazy.spawn('firefox'), desc="Launch firefox browser"),
+    Key([mod], "g", lazy.spawn('google-chrome-stable'), desc="Launch chrome browser"),
     Key([mod], "o", lazy.spawn('obsidian'), desc="Launch obsidian "),
 
     # Toggle between different layouts as defined below
@@ -90,10 +91,16 @@ keys = [
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
     # Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
 
+    # fullscreen
+    Key([mod], "s", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
+
     # volume
-    Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%")),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%")),
-    Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
+    Key([], "XF86AudioLowerVolume",
+        lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%")),
+    Key([], "XF86AudioRaiseVolume",
+        lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%")),
+    Key([], "XF86AudioMute",
+        lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
 
     # brightness
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +5%")),

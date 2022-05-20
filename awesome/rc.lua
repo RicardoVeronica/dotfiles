@@ -97,17 +97,17 @@ local themes = {
     "vertex"           -- 10
 }
 
-local chosen_theme = themes[7]
+local chosen_theme = themes[2]
 local modkey       = "Mod4"
 local altkey       = "Mod1"
-local terminal     = "alacritty"
+local terminal     = "gnome-terminal"
 local vi_focus     = false -- vi-like client focus https://github.com/lcpz/awesome-copycats/issues/275
 local cycle_prev   = true  -- cycle with only the previously focused client or all https://github.com/lcpz/awesome-copycats/issues/274
 local editor       = os.getenv("nvim") or "nvim"
-local browser      = "brave"
+local browser      = "firefox"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { " A ", " B ", " C ", " D ", " E " }
+awful.util.tagnames = { " 1 ", " 2 ", " 3 ", " 4 ", " 5 " }
 awful.layout.layouts = {
     awful.layout.suit.tile,
     awful.layout.suit.floating,
@@ -364,7 +364,7 @@ globalkeys = mytable.join(
         {description = "cycle with previous/go back", group = "client"}),
 
     -- Show/hide wibox
-    awful.key({ modkey }, "b", function ()
+    awful.key({ modkey }, "t", function ()
             for s in screen do
                 s.mywibox.visible = not s.mywibox.visible
                 if s.mybottomwibox then
@@ -438,12 +438,19 @@ globalkeys = mytable.join(
     --           {description = "show weather", group = "widgets"}),
 
     -- Screen brightness
-    -- awful.key({ }, "XF86MonBrightnessUp", function () os.execute("xbacklight -inc 10") end,
-    --           {description = "+10%", group = "hotkeys"}),
-    -- awful.key({ }, "XF86MonBrightnessDown", function () os.execute("xbacklight -dec 10") end,
-    --           {description = "-10%", group = "hotkeys"}),
+    awful.key({ }, "XF86MonBrightnessUp", function () os.execute("brightnessctl set +5%") end,
+              {description = "Brightness +5%", group = "hotkeys"}),
+    awful.key({ }, "XF86MonBrightnessDown", function () os.execute("brightnessctl set 5%-") end,
+              {description = "Brightness -5%", group = "hotkeys"}),
 
-    -- ALSA volume control
+    -- Volume control
+    -- awful.key({ }, "XF86AudioLowerVolume", function () os.execute("pactl set-sink-volume @DEFAULT_SINK@ -5%") end,
+    --           {description = "volume -5%", group = "hotkeys"}),
+    -- awful.key({ }, "XF86AudioRaiseVolume", function () os.execute("pactl set-sink-volume @DEFAULT_SINK@ +5%") end,
+    --           {description = "volume +5%", group = "hotkeys"}),
+    -- awful.key({ }, "XF86AudioMute", function () os.execute("pactl set-sink-mute @DEFAULT_SINK@ toggle") end,
+    --           {description = "volume +5%", group = "hotkeys"}),
+
     awful.key({ altkey }, "Up",
         function ()
             os.execute(string.format("amixer -q set %s 1%%+", beautiful.volume.channel))
@@ -456,12 +463,6 @@ globalkeys = mytable.join(
             beautiful.volume.update()
         end,
         {description = "volume down", group = "hotkeys"}),
-    awful.key({ altkey }, "m",
-        function ()
-            os.execute(string.format("amixer -q set %s toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
-            beautiful.volume.update()
-        end,
-        {description = "toggle mute", group = "hotkeys"}),
     awful.key({ altkey, "Control" }, "m",
         function ()
             os.execute(string.format("amixer -q set %s 100%%", beautiful.volume.channel))
@@ -540,7 +541,7 @@ globalkeys = mytable.join(
     -- alternatively use rofi, a dmenu-like application with more features
     -- check https://github.com/DaveDavenport/rofi for more details
     --rofi
-    awful.key({ modkey }, "p", function ()
+    awful.key({ modkey }, "m", function ()
             os.execute(string.format("rofi -show drun"))
         end,
         {description = "show rofi", group = "launcher"}),
@@ -571,7 +572,7 @@ clientkeys = mytable.join(
             c:raise()
         end,
         {description = "toggle fullscreen", group = "client"}),
-    awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
+    awful.key({ modkey, "Shift"   }, "w",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
               {description = "toggle floating", group = "client"}),

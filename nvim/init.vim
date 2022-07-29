@@ -30,6 +30,7 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'w0rp/ale'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdtree'
+Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }

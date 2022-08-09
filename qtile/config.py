@@ -54,7 +54,8 @@ keys = [
         desc="Move window to the right"),
     Key([mod, "shift"], "j", lazy.layout.shuffle_down(),
         desc="Move window down"),
-    Key([mod, "shift"], "k", lazy.layout.shuffle_up(), desc="Move window up"),
+    Key([mod, "shift"], "k", lazy.layout.shuffle_up(),
+        desc="Move window up"),
     # Grow windows. If current window is on the edge of screen and direction
     # will be to screen edge - window would shrink.
     Key([mod, "control"], "h", lazy.layout.grow_left(),
@@ -80,16 +81,20 @@ keys = [
     Key([mod], "m", lazy.spawn('rofi -show drun'), desc="Launch rofi menu"),
     Key([mod], "n", lazy.spawn('nautilus'), desc="Launch file manager"),
     Key([mod], "b", lazy.spawn('brave'), desc="Launch brave browser"),
-    Key([mod], "f", lazy.spawn('firefox'), desc="Launch firefox browser"),
-    Key([mod], "g", lazy.spawn('google-chrome-stable'), desc="Launch chrome browser"),
-    Key([mod], "o", lazy.spawn('obsidian'), desc="Launch obsidian "),
+    Key([mod], "f", lazy.spawn('firefox'),
+        desc="Launch firefox browser"),
+    Key([mod], "g", lazy.spawn('google-chrome-stable'),
+        desc="Launch chrome browser"),
+    Key([mod], "o", lazy.spawn('obsidian'),
+        desc="Launch obsidian "),
 
     # Toggle between different layouts as defined below
     Key([mod], "Tab", lazy.next_layout(), desc="Toggle between layouts"),
     Key([mod], "w", lazy.window.kill(), desc="Kill focused window"),
     Key([mod, "control"], "r", lazy.reload_config(), desc="Reload the config"),
     Key([mod, "control"], "q", lazy.shutdown(), desc="Shutdown Qtile"),
-    # Key([mod], "r", lazy.spawncmd(), desc="Spawn a command using a prompt widget"),
+    # Key([mod], "r", lazy.spawncmd(),
+    # desc="Spawn a command using a prompt widget"),
 
     # fullscreen
     Key([mod], "s", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
@@ -119,7 +124,8 @@ for i in groups:
                 lazy.group[i.name].toscreen(),
                 desc="Switch to group {}".format(i.name),
             ),
-            # mod1 + shift + letter of group = switch to & move focused window to group
+            # mod1 + shift + letter of group = switch to &
+            # move focused window to group
             Key(
                 [mod, "shift"],
                 i.name,
@@ -171,14 +177,16 @@ screens = [
                     name_transform=lambda name: name.upper(),
                 ),
                 # widget.TextBox("default config", name="default"),
-                # widget.TextBox("Press &lt;M-r&gt; to spawn", foreground="#d75f5f"),
+                # widget.TextBox("Press &lt;M-r&gt; to spawn",
+                # foreground="#d75f5f"),
                 widget.Systray(),
                 widget.Clock(format="%d-%m-%Y %a %I:%M %p"),
                 # widget.QuickExit(),
             ],
             25,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
+            # border_color=["ff00ff", "000000", "ff00ff", "000000"]
+            # Borders are magenta
         ),
     ),
 ]
@@ -199,7 +207,8 @@ bring_front_click = False
 cursor_warp = False
 floating_layout = layout.Floating(
     float_rules=[
-        # Run the utility of `xprop` to see the wm class and name of an X client.
+        # Run the utility of `xprop` to see the wm class and name of
+        # an X client.
         *layout.Floating.default_float_rules,
         Match(wm_class="confirmreset"),  # gitk
         Match(wm_class="makebranch"),  # gitk

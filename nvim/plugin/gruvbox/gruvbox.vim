@@ -1,2 +1,0 @@
-" set colors
-colorscheme gruvbox

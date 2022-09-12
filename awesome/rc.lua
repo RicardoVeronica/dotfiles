@@ -444,10 +444,10 @@ globalkeys = mytable.join(
               {description = "Brightness -5%", group = "hotkeys"}),
 
     -- Volume control
-    -- awful.key({ }, "XF86AudioLowerVolume", function () os.execute("pactl set-sink-volume @DEFAULT_SINK@ -5%") end,
-    --           {description = "volume -5%", group = "hotkeys"}),
-    -- awful.key({ }, "XF86AudioRaiseVolume", function () os.execute("pactl set-sink-volume @DEFAULT_SINK@ +5%") end,
-    --           {description = "volume +5%", group = "hotkeys"}),
+    awful.key({ }, "XF86AudioLowerVolume", function () os.execute("pactl set-sink-volume @DEFAULT_SINK@ -5%") end,
+              {description = "volume -5%", group = "hotkeys"}),
+    awful.key({ }, "XF86AudioRaiseVolume", function () os.execute("pactl set-sink-volume @DEFAULT_SINK@ +5%") end,
+              {description = "volume +5%", group = "hotkeys"}),
     -- awful.key({ }, "XF86AudioMute", function () os.execute("pactl set-sink-mute @DEFAULT_SINK@ toggle") end,
     --           {description = "volume +5%", group = "hotkeys"}),
 

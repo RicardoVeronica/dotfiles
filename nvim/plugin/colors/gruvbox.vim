@@ -1,0 +1,2 @@
+" set colors
+colorscheme darcula

@@ -9,7 +9,7 @@ let g:coc_global_extensions = [
   \ 'coc-python',
   \ 'coc-css',
   \ 'coc-vimlsp',
-  \ 'coc-solargraph',
   \ 'coc-markdownlint',
-  \ 'coc-docker'
+  \ 'coc-docker',
+  \ 'coc-solargraph'
   \ ]

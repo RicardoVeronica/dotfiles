@@ -16,7 +16,7 @@ let mapleader = ","
 
 call plug#begin('~/.config/nvim/plugged')
 " vim look
-Plug 'morhetz/gruvbox'
+Plug 'doums/darcula'
 Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'ap/vim-buftabline'
@@ -25,6 +25,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'jiangmiao/auto-pairs'
+Plug 'AndrewRadev/tagalong.vim'
 " programming general
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'w0rp/ale'

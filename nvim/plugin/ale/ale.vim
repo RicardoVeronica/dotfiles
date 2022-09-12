@@ -1,7 +1,7 @@
 " set specific linters
 let g:ale_linters = {
+\ 'elixir': ['elixir-ls'],
 \ 'ruby': ['rubocop'],
-\ 'elixir': ['elixir-ls']
 \}
 
 " only run linters named in ale_linters settings

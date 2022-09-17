@@ -2,7 +2,7 @@
 filetype plugin on                        " enable filetype search
 syntax enable                             " better syntax
 syntax on                                 " color in syntax
-set nocompatible                          " disable vi compatibility mode
+" set nocompatible                          " disable vi compatibility mode
 set ttyfast                               " vim Faster
 set mouse=a                               " allow mouse selector
 set clipboard=unnamed                     " clipboard functionality

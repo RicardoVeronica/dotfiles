@@ -22,3 +22,8 @@ augroup THE_PRIMEAGEN " author
         autocmd!
         autocmd BufWritePre * :call TrimWhiteSpace()
 augroup END
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1] =~ '\s'
+endfunction

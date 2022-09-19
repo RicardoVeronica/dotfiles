@@ -1,5 +1,6 @@
 " ricardoveronica init.vim
-" Author and maintainer: Ricardo Veronica Duran <hola@ricardoveronica.com>
+" Author and maintainer: Ricardo Veronica Duran
+" <ricardo_veronica.duran@hotmail.com>
 " https://github.com/RicardoVeronica/dotfiles/blob/master/init.vim
 
 " LICENCE:
@@ -33,7 +34,7 @@ Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 " python

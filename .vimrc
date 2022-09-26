@@ -72,6 +72,8 @@ Plug 'vim-airline/vim-airline'
 
 " file menu
 Plug 'scrooloose/nerdtree'
+" search files
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 " tabs in vim
 Plug 'ap/vim-buftabline'
 " find things easy

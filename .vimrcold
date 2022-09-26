@@ -1,4 +1,4 @@
-# sets
+" sets
 syntax on                                 " color in syntax
 set nocompatible                          " disable vi compatibility mode
 set mouse=a                               " allow mouse selector
@@ -62,7 +62,7 @@ nmap <F5> :call ToggleRelativeNumber()<cr>
 imap <F5> <Esc>: call ToggleRelativeNumber()<cr>a
 
 " plugins
-call plug#begin('~/.config/nvim/plugged')
+call plug#begin('~/.vim/plugged')
 Plug 'elixir-editors/vim-elixir'
 Plug 'amiralies/coc-elixir', {'do': 'yarn install && yarn prepack'}
 Plug 'elixir-lsp/coc-elixir', {'do': 'yarn install && yarn prepack'}

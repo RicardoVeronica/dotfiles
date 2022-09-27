@@ -57,9 +57,8 @@ au BufNewFile,BufRead *.html set filetype=htmldjango
 " leader
 let mapleader=","
 
-" pluggins
 call plug#begin()
-" look
+"""""" look
 
 " colors
 Plug 'morhetz/gruvbox'
@@ -68,7 +67,7 @@ Plug 'ryanoasis/vim-devicons'
 " better look at bottom
 Plug 'vim-airline/vim-airline'
 
-" utilities
+"""""" utilities
 
 " file menu
 Plug 'scrooloose/nerdtree'
@@ -83,7 +82,7 @@ Plug 'tpope/vim-surround'
 " close pair like parenthesis
 Plug 'jiangmiao/auto-pairs'
 
-" programming
+"""""" programming
 
 " snippets
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
@@ -91,6 +90,11 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'ervandew/supertab'
 " easy commentaries
 Plug 'tpope/vim-commentary'
+
+"""""" HTML
+
+" change tags auto
+Plug 'AndrewRadev/tagalong.vim'
 call plug#end()
 
 " set color
@@ -141,3 +145,10 @@ augroup THE_PRIMEAGEN " author
         autocmd!
         autocmd BufWritePre * :call TrimWhiteSpace()
 augroup END
+
+" plugs config
+
+" nerdtree
+nmap <leader>nt: :NERDTreeToggle<cr>
+let NERDTreeWinSize=25
+let NERDTreeQuitOnOpen=1

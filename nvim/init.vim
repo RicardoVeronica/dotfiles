@@ -25,12 +25,10 @@ Plug 'ap/vim-buftabline'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
-Plug 'jiangmiao/auto-pairs'
 Plug 'AndrewRadev/tagalong.vim'
 " programming general
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'w0rp/ale'
-Plug 'ervandew/supertab'
 Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'

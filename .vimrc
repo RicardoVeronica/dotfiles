@@ -1,5 +1,6 @@
-" ricardoveronica init.vim
-" Author and maintainer: Ricardo Veronica Duran <hola@ricardoveronica.com>
+" ricardoveronica vimrc
+" Author and maintainer: Ricardo Veronica Duran
+" <ricardo_veronica.duran@hotmail.com>
 " https://github.com/RicardoVeronica/dotfiles/blob/master/.vimrc
 
 " LICENCE:
@@ -12,10 +13,10 @@
 " ThePrimeagen - https://github.com/ThePrimeagen/.dotfiles
 
 " General settings
-filetype plugin on                        " enable filetype search
+filetype indent plugin on                 " enable filetype search
 syntax enable                             " color in syntax
 syntax on                                 " syntax on files
-set nocompatible                          " disable vi compatibility mode
+set hidden                                " active buffers in background
 set ttyfast                               " vim Faster
 set mouse=a                               " allow mouse selection
 set clipboard=unnamed                     " copy in VIM stay in your OS clipboard
@@ -37,6 +38,9 @@ set lazyredraw                            " the screen not redraw
 set incsearch                             " mark while searching words
 set nu                                    " numbers and lines for better style
 
+" doesn't need anymore, vim automatically disable this option when vimrc exist
+" set nocompatible                          " disable vi compatibility mode
+
 " menubar
 set laststatus=2                 " Always show status bar
 set showmode                     " Always show mode
@@ -48,9 +52,15 @@ set shiftwidth=2                 " Space in identation
 set softtabstop=2                " Same identation when run back
 set expandtab                    " Space no tabs
 set autoindent                   " Autoident always on
-set smartindent                  " Indent the better vim can
+set smartindent                  " Indent the better vim can do
 set backspace=indent,eol,start   " Backspace always work on insert mode
 set encoding=utf-8               " Always use unicode
+
+" undofiles
+set undodir=~/.vim/undodir/
+set undofile
+
+" python and django
 autocmd FileType py setlocal shiftwidth=4 softtabstop=4
 au BufNewFile,BufRead *.html set filetype=htmldjango
 
@@ -95,6 +105,8 @@ Plug 'tpope/vim-commentary'
 
 " change tags auto
 Plug 'AndrewRadev/tagalong.vim'
+" close tag auto
+Plug 'alvan/vim-closetag'
 call plug#end()
 
 " set color
@@ -119,6 +131,10 @@ noremap <up> <nop>
 noremap <down> <nop>
 noremap <left> <nop>
 noremap <right> <nop>
+
+" syntax often gets messed up on files with multiple languages
+noremap <F12> <Esc>:syntax sync fromstart<CR>
+inoremap <F12> <C-o>:syntax sync fromstart<CR>
 
 " functions
 function! ToggleRelativeNumber()

@@ -30,7 +30,6 @@ Plug 'AndrewRadev/tagalong.vim'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'w0rp/ale'
 Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -51,4 +50,9 @@ Plug 'gko/vim-coloresque'
 " html
 Plug 'mattn/emmet-vim'
 Plug 'vim-scripts/loremipsum'
+Plug 'alvan/vim-closetag'
+" svelte
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
 call plug#end()

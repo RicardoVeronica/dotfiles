@@ -6,6 +6,9 @@ nmap <leader>z :q!<cr>
 nmap <leader>w :w<cr>
 nmap <leader>e :wq<cr>
 
+" ruby exec
+nmap <leader>r :! ruby %<cr>
+
 " basic moves
 map <c-h> <c-w>h
 map <c-j> <c-w>j

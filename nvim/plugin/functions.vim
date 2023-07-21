@@ -39,3 +39,18 @@ function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
+" my own config for run <leader>r and run code in differents languages
+" Does not work
+" function! RunCode(language)
+"   if a:language == "javascript"
+"     execute "!node %"
+"   elseif a:language == "ruby"
+"     execute "!ruby %"
+"   else
+"     echo "Unsupported language, you can add it in .config/nvim/plugin/functions.vim"
+"   endif
+" endfunction
+
+" nmap <leader>r :call RunCode("ruby")<cr>
+" nmap <leader>r :call RunCode("javascript")<cr>

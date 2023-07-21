@@ -22,6 +22,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'vim-airline/vim-airline'
 Plug 'ap/vim-buftabline'
 " helpers
+Plug 'jiangmiao/auto-pairs'
 Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
@@ -51,8 +52,11 @@ Plug 'gko/vim-coloresque'
 Plug 'mattn/emmet-vim'
 Plug 'vim-scripts/loremipsum'
 Plug 'alvan/vim-closetag'
-" svelte
+" astro
+Plug 'wuelnerdotexe/vim-astro'
+" svelte requirements
 Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
+" svelte
 Plug 'evanleck/vim-svelte', {'branch': 'main'}
 call plug#end()

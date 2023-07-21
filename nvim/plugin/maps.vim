@@ -6,8 +6,9 @@ nmap <leader>z :q!<cr>
 nmap <leader>w :w<cr>
 nmap <leader>e :wq<cr>
 
-" ruby exec
+" languages exec directly in nvim
 nmap <leader>r :! ruby %<cr>
+nmap <leader>j :! node %<cr>
 
 " basic moves
 map <c-h> <c-w>h

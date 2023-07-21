@@ -10,12 +10,12 @@ set background=dark                       " background dark
 set colorcolumn=79                        " colum limit
 set scrolloff=3                           " 3 spaceses while scrolling
 set nohlsearch                            " no recursive result in search
+set nohlsearch                            " no remain the search
 set nowrap                                " no wrap in files
 set number                                " show a line number
 set relativenumber                        " relative numbers in line numbers
 set smartcase                             " search in smartcase
 set noswapfile                            " no swap files
-set nohlsearch                            " no remain the search
 set nobackup                              " if you need backup use git
 set cursorline                            " highlight in actual line
 set cursorcolumn                          " highlight in actual colum
@@ -40,3 +40,6 @@ set smartindent                           " better indentation
 " python and django templates
 autocmd FileType py setlocal shiftwidth=4 softtabstop=4
 au BufNewFile,BufRead *.html set filetype=htmldjango
+
+let g:user_emmet_install_global = 0
+autocmd FileType html,css,astro EmmetInstall

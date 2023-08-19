@@ -7,8 +7,9 @@ nmap <leader>w :w<cr>
 nmap <leader>e :wq<cr>
 
 " languages exec directly in nvim
-nmap <leader>r :! ruby %<cr>
-nmap <leader>j :! node %<cr>
+nmap <leader>ru :! ruby %<cr>
+nmap <leader>no :! node %<cr>
+nmap <leader>el :! elixir %<cr>
 
 " basic moves
 map <c-h> <c-w>h

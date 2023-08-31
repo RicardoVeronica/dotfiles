@@ -11,5 +11,6 @@ let g:coc_global_extensions = [
   \ 'coc-vimlsp',
   \ 'coc-markdownlint',
   \ 'coc-docker',
-  \ 'coc-solargraph'
+  \ 'coc-solargraph',
+  \ 'coc-phpls'
   \ ]

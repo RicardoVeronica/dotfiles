@@ -41,5 +41,10 @@ set smartindent                           " better indentation
 autocmd FileType py setlocal shiftwidth=4 softtabstop=4
 au BufNewFile,BufRead *.html set filetype=htmldjango
 
+" emmet
 let g:user_emmet_install_global = 0
-autocmd FileType html,css,astro EmmetInstall
+autocmd FileType html,css,astro,php EmmetInstall
+
+" php
+autocmd FileType php setl formatexpr=CocAction('formatSelected')
+autocmd FileType php nmap <silent><buffer> gd <Plug>(coc-definition)

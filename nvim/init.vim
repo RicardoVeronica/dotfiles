@@ -36,6 +36,8 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+" php
+Plug 'yaegassy/coc-blade', {'do': 'yarn install --frozen-lockfile'}
 " python
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 " elixir

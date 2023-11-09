@@ -1,0 +1,64 @@
+" ricardoveronica init.vim
+" Author and maintainer: Ricardo Veronica Duran
+" <ricardo_veronica.duran@hotmail.com>
+" https://github.com/RicardoVeronica/dotfiles/blob/master/init.vim
+
+" LICENCE:
+" You are free to read and study this bundle or snippets of it and to use
+" it on your own vimrc settings. Feel free to tweak and adapt my vimrc to
+" siut your needs and to make the changes yours. Attibution to this vimrc
+" is not required although is thanked.
+" Insperation:
+" Makigas - https://github.com/danirod/vimrc
+" ThePrimeagen - https://github.com/ThePrimeagen/.dotf...
+
+" leader key
+let mapleader = ","
+
+call plug#begin('~/.config/nvim/plugged')
+" vim look
+Plug 'doums/darcula'
+Plug 'ryanoasis/vim-devicons'
+Plug 'vim-airline/vim-airline'
+Plug 'ap/vim-buftabline'
+" helpers
+Plug 'jiangmiao/auto-pairs'
+Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'AndrewRadev/tagalong.vim'
+" programming general
+Plug 'neoclide/coc.nvim', { 'branch': 'release' }
+Plug 'w0rp/ale'
+Plug 'scrooloose/nerdtree'
+Plug 'airblade/vim-gitgutter'
+" Plug 'SirVer/ultisnips'
+" Plug 'honza/vim-snippets'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+" php
+Plug 'yaegassy/coc-blade', {'do': 'yarn install --frozen-lockfile'}
+" python
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+" elixir
+Plug 'elixir-editors/vim-elixir'
+Plug 'amiralies/coc-elixir', {'do': 'yarn install && yarn prepack'}
+Plug 'elixir-lsp/elixir-ls'
+" js
+Plug 'pangloss/vim-javascript'
+Plug 'MaxMEllon/vim-jsx-pretty'
+" css
+Plug 'styled-components/vim-styled-components', {'branch': 'main'}
+Plug 'gko/vim-coloresque'
+" html
+Plug 'mattn/emmet-vim'
+Plug 'vim-scripts/loremipsum'
+Plug 'alvan/vim-closetag'
+" astro
+Plug 'wuelnerdotexe/vim-astro'
+" svelte requirements
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+" svelte
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
+call plug#end()
